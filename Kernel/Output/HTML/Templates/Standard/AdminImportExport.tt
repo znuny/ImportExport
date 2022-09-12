@@ -8,7 +8,30 @@
 
 [% RenderBlockStart("Overview") %]
 <div class="MainBox ARIARoleMain LayoutFixedSidebar SidebarFirst">
-    <h1>[% Translate("Import/Export Management") | html %]</h1>
+    <h1 class="InvisibleText">[% Translate("Import/Export Management") | html %]</h1>
+
+    [% BreadcrumbPath = [
+            {
+                Name => Translate('Import/Export Management'),
+                Link => Env("Action"),
+            },
+        ]
+    %]
+
+    [% SWITCH Data.Subaction %]
+        [% CASE 'TemplateEdit1' %]
+            [% BreadcrumbPath.push({ Name => Translate("Step 1 of 5 - Edit common information"),}) %]
+        [% CASE 'TemplateEdit2' %]
+            [% BreadcrumbPath.push({ Name => Translate("Step 2 of 5 - Edit object information"),}) %]
+        [% CASE 'TemplateEdit3' %]
+            [% BreadcrumbPath.push({ Name => Translate("Step 3 of 5 - Edit format information"),}) %]
+        [% CASE 'TemplateEdit4' %]
+            [% BreadcrumbPath.push({ Name => Translate("Step 4 of 5 - Edit mapping information"),}) %]
+        [% CASE 'TemplateEdit5' %]
+            [% BreadcrumbPath.push({ Name => Translate("Step 5 of 5 - Edit search information"),}) %]
+    [% END %]
+
+    [% INCLUDE "Breadcrumb.tt" Path = BreadcrumbPath %]
 
     <div class="SidebarColumn">
 
@@ -126,9 +149,6 @@
 [% RenderBlockEnd("OverviewList") %]
 
 [% RenderBlockStart("TemplateEdit1") %]
-            <div class="Header">
-                <h2>[% Translate("Step 1 of 5 - Edit common information") | html %]:</h2>
-            </div>
             <div class="Content">
                 <form action="[% Env("CGIHandle") %]" method="post" class="Validate PreventMultipleSubmits">
                     <input type="hidden" name="Action" value="[% Env("Action") %]" />
@@ -221,9 +241,6 @@
 [% RenderBlockEnd("TemplateEdit1") %]
 
 [% RenderBlockStart("TemplateEdit2") %]
-            <div class="Header">
-                <h2>[% Translate("Step 2 of 5 - Edit object information") | html %]:</h2>
-            </div>
             <div class="Content">
                 <form action="[% Env("CGIHandle") %]" method="post" class="Validate PreventMultipleSubmits">
                     <input type="hidden" name="Action" value="[% Env("Action") %]" />
@@ -268,9 +285,6 @@
 [% RenderBlockEnd("TemplateEdit2") %]
 
 [% RenderBlockStart("TemplateEdit3") %]
-            <div class="Header">
-                <h2>[% Translate("Step 3 of 5 - Edit format information") | html %]:</h2>
-            </div>
             <div class="Content">
                 <form action="[% Env("CGIHandle") %]" method="post" class="Validate PreventMultipleSubmits">
                     <input type="hidden" name="Action" value="[% Env("Action") %]" />
@@ -316,9 +330,6 @@
 [% RenderBlockEnd("TemplateEdit3") %]
 
 [% RenderBlockStart("TemplateEdit4") %]
-            <div class="Header">
-                <h2>[% Translate("Step 4 of 5 - Edit mapping information") | html %]:</h2>
-            </div>
             <div class="Content">
                 <div class="MapHeaderRow SpacingTop">
                     <div class="Header">
@@ -421,9 +432,6 @@
 [% RenderBlockEnd("TemplateEdit4") %]
 
 [% RenderBlockStart("TemplateEdit5") %]
-            <div class="Header">
-                <h2>[% Translate("Step 5 of 5 - Edit search information") | html %]:</h2>
-            </div>
             <div class="Content">
                 <form action="[% Env("CGIHandle") %]" method="post" class="Validate PreventMultipleSubmits">
                     <input type="hidden" name="Action" value="[% Env("Action") %]" />

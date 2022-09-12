@@ -33,6 +33,8 @@ sub Run {
     my $ParamObject        = $Kernel::OM->Get('Kernel::System::Web::Request');
     my $LayoutObject       = $Kernel::OM->Get('Kernel::Output::HTML::Layout');
 
+    $Param{Subaction} = $Self->{Subaction};
+
     # ------------------------------------------------------------ #
     # template edit (common)
     # ------------------------------------------------------------ #
@@ -132,6 +134,7 @@ sub Run {
             return $Self->_MaskTemplateEdit1(
                 ServerError => \%ServerError,
                 New         => $New,
+                Subaction   => $Self->{Subaction},
                 %{$TemplateData},
             );
         }
@@ -204,7 +207,10 @@ sub Run {
         my $SubmitNext = $ParamObject->GetParam( Param => 'SubmitNext' );
 
         if ( !$SubmitNext ) {
-            return $Self->_MaskTemplateEdit2( TemplateID => $TemplateID );
+            return $Self->_MaskTemplateEdit2(
+                TemplateID => $TemplateID,
+                Subaction  => $Self->{Subaction},
+            );
         }
 
         # save template starts here
@@ -258,6 +264,7 @@ sub Run {
                 DataTypeError    => \%DataTypeError,
                 TemplateDataForm => \%AttributeValues,
                 TemplateID       => $TemplateID,
+                Subaction        => $Self->{Subaction},
             );
         }
 
@@ -311,7 +318,10 @@ sub Run {
         my $SubmitNext = $ParamObject->GetParam( Param => 'SubmitNext' );
 
         if ( !$SubmitNext ) {
-            return $Self->_MaskTemplateEdit3( TemplateID => $TemplateID );
+            return $Self->_MaskTemplateEdit3(
+                TemplateID => $TemplateID,
+                Subaction  => $Self->{Subaction},
+            );
         }
 
         # save starting here
@@ -352,6 +362,7 @@ sub Run {
             return $Self->_MaskTemplateEdit3(
                 ServerError => \%ServerError,
                 TemplateID  => $TemplateID,
+                Subaction   => $Self->{Subaction},
             );
         }
 
