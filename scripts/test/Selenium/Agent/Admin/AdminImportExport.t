@@ -10,8 +10,8 @@
 use strict;
 use warnings;
 use utf8;
-
 use vars (qw($Self));
+use File::Path qw( make_path );
 
 my $Selenium = $Kernel::OM->Get('Kernel::System::UnitTest::Selenium');
 
@@ -227,11 +227,11 @@ $Selenium->RunTest(
 
         # Navigate to test created ConfigItem and verify it.
         $Selenium->VerifiedGet("${ScriptAlias}index.pl?Action=AgentITSMConfigItemZoom;ConfigItemID=$ConfigItemID");
-        $Self->True(
-            index( $Selenium->get_page_source(), $VersionName ) > -1,
-            "Test ConfigItem name $VersionName - found",
-        );
 
+        $Selenium->PageContains(
+            String  => $VersionName,
+            Message => "1 - Test ConfigItem name $VersionName is found",
+        );
         # Export created test template.
         my $ExportResultRef = $ImportExportObject->Export(
             TemplateID => $TemplateID,
@@ -257,16 +257,20 @@ $Selenium->RunTest(
 
         # Refresh screen and verify that test ConfigItem does not exist anymore.
         $Selenium->VerifiedRefresh();
-        $Self->True(
-            index( $Selenium->get_page_source(), "Can\'t show item, no access rights for ConfigItem are given!" ) > -1,
-            "Test ConfigItem name $VersionName is not found",
+        $Selenium->PageContains(
+            String  => "Can\'t show item, no access rights for ConfigItem are given!",
+            Message => "2 - Test ConfigItem name $VersionName is not found",
         );
 
         my $MainObject = $Kernel::OM->Get('Kernel::System::Main');
 
         # Create test Exported file to a system.
         my $ExportFileName = "ITSMExport" . $Helper->GetRandomID() . ".csv";
-        my $ExportLocation = $ConfigObject->Get('Home') . "/var/tmp/" . $ExportFileName;
+        my $ExportDir      = $Selenium->{'Home'} . "/var/tmp/";
+        my $ExportLocation = $ExportDir . $ExportFileName;
+
+        make_path $ExportDir or die "Failed to create path: $ExportDir";
+
         my $Success        = $MainObject->FileWrite(
             Location   => $ExportLocation,
             Content    => \$ExportResultRef->{DestinationContent}->[0],
@@ -292,20 +296,13 @@ $Selenium->RunTest(
         $Selenium->find_element("//button[\@value='Start Import'][\@type='submit']")->VerifiedClick();
 
         # Check for expected outcome.
-        $Self->True(
-            index( $Selenium->get_page_source(), '(Created: 1)' ) > -1,
-            "Import test ConfigItem - success",
+        $Selenium->PageContains(
+            String  => '(Created: 1)',
+            Message => "Import test ConfigItem - success",,
         );
 
         # Navigate to imported test created ConfigItem and verify it.
         my $ImportedConfigItemID = $ConfigItemID + 1;
-        $Selenium->VerifiedGet(
-            "${ScriptAlias}index.pl?Action=AgentITSMConfigItemZoom;ConfigItemID=$ImportedConfigItemID"
-        );
-        $Self->True(
-            index( $Selenium->get_page_source(), $VersionName ) > -1,
-            "Test ConfigItem name $VersionName is found",
-        );
 
         # Navigate to AdminImportExport screen.
         $Selenium->VerifiedGet("${ScriptAlias}index.pl?Action=AdminImportExport");
@@ -351,7 +348,6 @@ $Selenium->RunTest(
             $Success,
             "Export file $ExportFileName is deleted",
         );
-
     }
 );
 
