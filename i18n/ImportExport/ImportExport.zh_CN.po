@@ -4,8 +4,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-24 10:41+0000\n"
 "PO-Revision-Date: 2022-01-21 10:51+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Chinese (Simplified) <https://translations.znuny.org/projects/"
-"znuny/importexport/zh_Hans/>\n"
+"Language-Team: Chinese (Simplified) <https://translations.znuny.org/projects/znuny/importexport/zh_Hans/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,117 +12,115 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.8\n"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Import/Export Management"
 msgstr "导入/导出管理"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Add template"
 msgstr "添加模板"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Create a template to import and export object information."
 msgstr "创建模板导入和导出对象信息。"
 
-#. Template: AdminImportExport
-msgid ""
-"To use this module, you need to install ITSMConfigurationManagement or any "
-"other package that provides back end for objects to be imported and exported."
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
+msgid "To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported."
 msgstr "要使用此模块，您需要安装ITSMConfigurationManagement或为要导入和导出的对象提供后端的任何其它软件包。"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Start Import"
 msgstr "开始导入"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Start Export"
 msgstr "开始导出"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Delete this template"
 msgstr "删除此模板"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Step 1 of 5 - Edit common information"
 msgstr "步骤 1/5 - 编辑通用信息"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Name is required!"
 msgstr "名称是必需的！"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Object is required!"
 msgstr "对象是必需的！"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Format is required!"
 msgstr "格式是必需的！"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Step 2 of 5 - Edit object information"
 msgstr "步骤 2/5 - 编辑对象信息"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Step 3 of 5 - Edit format information"
 msgstr "步骤 3/5 - 编辑格式信息"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "is required!"
 msgstr "是必需的！"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Step 4 of 5 - Edit mapping information"
 msgstr "步骤 4/5 - 编辑映射信息"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "No map elements found."
 msgstr "没有找到映射的元素。"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Add Mapping Element"
 msgstr "添加映射元素"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Step 5 of 5 - Edit search information"
 msgstr "步骤 5/5 - 编辑搜索信息"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Restrict export per search"
 msgstr "按搜索限制导出"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Import information"
 msgstr "导入信息"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Source File"
 msgstr "源文件"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Import summary for %s"
 msgstr "%s的导入摘要"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Records"
 msgstr "记录"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Success"
 msgstr "成功"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Duplicate names"
 msgstr "重复的名称"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Last processed line number of import file"
 msgstr "导入文件最后处理的行数"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Ok"
 msgstr "确定"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Do you really want to delete this template item?"
 msgstr "您真的想要删除这个模板条目吗？"
 
@@ -223,17 +220,15 @@ msgstr "包括列标题"
 msgid "Column"
 msgstr "列"
 
-#. JS File: ITSM.Admin.ImportExport
+#. JS File: var/httpd/htdocs/js/ITSM.Admin.ImportExport.js
 msgid "Deleting template..."
 msgstr "正在删除模板……"
 
-#. JS File: ITSM.Admin.ImportExport
-msgid ""
-"There was an error deleting the template. Please check the logs for more "
-"information."
+#. JS File: var/httpd/htdocs/js/ITSM.Admin.ImportExport.js
+msgid "There was an error deleting the template. Please check the logs for more information."
 msgstr "删除模板时出错，请检查日志以获取更多信息。"
 
-#. JS File: ITSM.Admin.ImportExport
+#. JS File: var/httpd/htdocs/js/ITSM.Admin.ImportExport.js
 msgid "Template was deleted successfully."
 msgstr "模板已成功删除。"
 
@@ -248,3 +243,4 @@ msgstr "导入和导出对象信息。"
 #. SysConfig
 msgid "Import/Export"
 msgstr "导入/导出"
+

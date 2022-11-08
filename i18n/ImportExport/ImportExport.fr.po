@@ -4,8 +4,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-24 10:41+0000\n"
 "PO-Revision-Date: 2022-01-21 10:51+0000\n"
 "Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: French <https://translations.znuny.org/projects/znuny/"
-"importexport/fr/>\n"
+"Language-Team: French <https://translations.znuny.org/projects/znuny/importexport/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -13,117 +12,115 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.8\n"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Import/Export Management"
 msgstr "Gestion de l'importation/exportation"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Add template"
 msgstr "Ajouter un modèle"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Create a template to import and export object information."
 msgstr "Créer un modèle pour importer et exporter les informations d'objet"
 
-#. Template: AdminImportExport
-msgid ""
-"To use this module, you need to install ITSMConfigurationManagement or any "
-"other package that provides back end for objects to be imported and exported."
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
+msgid "To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported."
 msgstr ""
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Start Import"
 msgstr "Démarrer l'import"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Start Export"
 msgstr "Démarrer l'export"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Delete this template"
 msgstr ""
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Step 1 of 5 - Edit common information"
 msgstr "Étape 1 sur 5 - Éditer les information communes"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Name is required!"
 msgstr "Un nom est requis !"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Object is required!"
 msgstr "Un objet est requis !"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Format is required!"
 msgstr "Un format est requis !"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Step 2 of 5 - Edit object information"
 msgstr "Étape 2 sur 5 - Éditer les informations de l'objet"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Step 3 of 5 - Edit format information"
 msgstr "Étape 3 sur 5 - Éditer les informations du format"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "is required!"
 msgstr "est requis !"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Step 4 of 5 - Edit mapping information"
 msgstr "Étape 4 sur 5 - Éditer les informations de mappage"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "No map elements found."
 msgstr "Aucun élément de mappage trouvé."
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Add Mapping Element"
 msgstr "Ajouter un élément de mappage"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Step 5 of 5 - Edit search information"
 msgstr "Étape 5 sur 5 - Éditer les informations de recherche"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Restrict export per search"
 msgstr "Restreindre l'exportation par recherche"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Import information"
 msgstr "Informations d'importation"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Source File"
 msgstr "Fichier source"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Import summary for %s"
 msgstr "Importer le résumé pour %s"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Records"
 msgstr "Enregistrements"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Success"
 msgstr "Réussi"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Duplicate names"
 msgstr "Noms en double"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Last processed line number of import file"
 msgstr "Numéro de la dernière ligne traitée dans le fichier d'importation"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Ok"
 msgstr "Ok"
 
-#. Template: AdminImportExport
+#. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Do you really want to delete this template item?"
 msgstr ""
 
@@ -149,15 +146,11 @@ msgstr "L'ID du modèle est requis !"
 
 #. Perl Module: Kernel/Modules/AdminImportExport.pm
 msgid "Error occurred. Import impossible! See Syslog for details."
-msgstr ""
-"Une erreur est survenue, importation impossible ! Pour plus de détails, "
-"consultez le journal d’événements système."
+msgstr "Une erreur est survenue, importation impossible ! Pour plus de détails, consultez le journal d’événements système."
 
 #. Perl Module: Kernel/Modules/AdminImportExport.pm
 msgid "Error occurred. Export impossible! See Syslog for details."
-msgstr ""
-"Une erreur est survenue, exportation impossible ! Pour plus de détails, "
-"consultez le journal d’événements système."
+msgstr "Une erreur est survenue, exportation impossible ! Pour plus de détails, consultez le journal d’événements système."
 
 #. Perl Module: Kernel/Modules/AdminImportExport.pm
 msgid "Template List"
@@ -227,25 +220,21 @@ msgstr "Inclure les en-têtes de colonnes"
 msgid "Column"
 msgstr "Colonne"
 
-#. JS File: ITSM.Admin.ImportExport
+#. JS File: var/httpd/htdocs/js/ITSM.Admin.ImportExport.js
 msgid "Deleting template..."
 msgstr ""
 
-#. JS File: ITSM.Admin.ImportExport
-msgid ""
-"There was an error deleting the template. Please check the logs for more "
-"information."
+#. JS File: var/httpd/htdocs/js/ITSM.Admin.ImportExport.js
+msgid "There was an error deleting the template. Please check the logs for more information."
 msgstr ""
 
-#. JS File: ITSM.Admin.ImportExport
+#. JS File: var/httpd/htdocs/js/ITSM.Admin.ImportExport.js
 msgid "Template was deleted successfully."
 msgstr ""
 
 #. SysConfig
 msgid "Format backend module registration for the import/export module."
-msgstr ""
-"Enregistrement du module \"Format backend\" pour le module d'importation/"
-"exportation"
+msgstr "Enregistrement du module \"Format backend\" pour le module d'importation/exportation"
 
 #. SysConfig
 msgid "Import and export object information."
@@ -254,3 +243,4 @@ msgstr "Importer et exporter des informations d'objet"
 #. SysConfig
 msgid "Import/Export"
 msgstr "Importer/Exporter"
+
