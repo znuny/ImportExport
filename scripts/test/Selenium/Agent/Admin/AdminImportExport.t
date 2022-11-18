@@ -232,6 +232,7 @@ $Selenium->RunTest(
             String  => $VersionName,
             Message => "1 - Test ConfigItem name $VersionName is found",
         );
+
         # Export created test template.
         my $ExportResultRef = $ImportExportObject->Export(
             TemplateID => $TemplateID,
@@ -269,9 +270,9 @@ $Selenium->RunTest(
         my $ExportDir      = $Selenium->{'Home'} . "/var/tmp/";
         my $ExportLocation = $ExportDir . $ExportFileName;
 
-        make_path $ExportDir or die "Failed to create path: $ExportDir";
+        make_path $ExportDir or die "Failed to create path: $ExportDir";    ## no critic
 
-        my $Success        = $MainObject->FileWrite(
+        my $Success = $MainObject->FileWrite(
             Location   => $ExportLocation,
             Content    => \$ExportResultRef->{DestinationContent}->[0],
             Mode       => 'utf8',
@@ -298,7 +299,8 @@ $Selenium->RunTest(
         # Check for expected outcome.
         $Selenium->PageContains(
             String  => '(Created: 1)',
-            Message => "Import test ConfigItem - success",,
+            Message => "Import test ConfigItem - success",
+            ,
         );
 
         # Navigate to imported test created ConfigItem and verify it.
