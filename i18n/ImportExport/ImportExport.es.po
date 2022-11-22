@@ -2,15 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ImportExport\n"
 "POT-Creation-Date: 2020-01-24 10:41+0000\n"
-"PO-Revision-Date: 2022-01-21 10:51+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Spanish <https://translations.znuny.org/projects/znuny/importexport/es/>\n"
+"PO-Revision-Date: 2022-11-22 08:24+0000\n"
+"Last-Translator: Denny Korsukéwitz <dk@znuny.com>\n"
+"Language-Team: Spanish <https://translations.znuny.org/projects/znuny/"
+"importexport/es/>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 4.14.1\n"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Import/Export Management"
@@ -38,7 +39,7 @@ msgstr "Iniciar Exportación"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Delete this template"
-msgstr ""
+msgstr "Eliminar esta plantilla"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Step 1 of 5 - Edit common information"
@@ -244,4 +245,3 @@ msgstr "Importar y exportar información de un objeto."
 #. SysConfig
 msgid "Import/Export"
 msgstr "Importar/Exportar"
-
