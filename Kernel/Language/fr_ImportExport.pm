@@ -1,9 +1,9 @@
 # --
-# Copyright (C) 2021-2022 Znuny GmbH, https://znuny.org/
+# Copyright (C) 2012-2022 Znuny GmbH, https://znuny.com/
 # --
 # This software comes with ABSOLUTELY NO WARRANTY. For details, see
-# the enclosed file COPYING for license information (GPL). If you
-# did not receive this file, see https://www.gnu.org/licenses/gpl-3.0.txt.
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
 # --
 
 package Kernel::Language::fr_ImportExport;
@@ -28,7 +28,7 @@ sub Data {
         '';
     $Self->{Translation}->{'Start Import'} = 'Démarrer l\'import';
     $Self->{Translation}->{'Start Export'} = 'Démarrer l\'export';
-    $Self->{Translation}->{'Delete this template'} = '';
+    $Self->{Translation}->{'Delete this template'} = 'Supprimer ce modèle';
     $Self->{Translation}->{'Name is required!'} = 'Un nom est requis !';
     $Self->{Translation}->{'Object is required!'} = 'Un objet est requis !';
     $Self->{Translation}->{'Format is required!'} = 'Un format est requis !';
