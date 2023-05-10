@@ -1148,6 +1148,14 @@ sub Run {
             return;
         }
 
+        # output overview
+        $LayoutObject->Block(
+            Name => 'Overview',
+            Data => {
+                %Param,
+            },
+        );
+
         # output header and navbar
         my $Output = $LayoutObject->Header();
         $Output .= $LayoutObject->NavigationBar();

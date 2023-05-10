@@ -8,33 +8,10 @@
 # --
 
 [% RenderBlockStart("Overview") %]
-<div class="MainBox ARIARoleMain LayoutFixedSidebar SidebarFirst">
+<div class="MainBox ARIARoleMain LayoutFixedSidebar SidebarFirst ActionsSideBar AdminManagement">
     <h1 class="InvisibleText">[% Translate("Import/Export Management") | html %]</h1>
 
-    [% BreadcrumbPath = [
-            {
-                Name => Translate('Import/Export Management'),
-                Link => Env("Action"),
-            },
-        ]
-    %]
-
-    [% SWITCH Data.Subaction %]
-        [% CASE 'TemplateEdit1' %]
-            [% BreadcrumbPath.push({ Name => Translate("Step 1 of 5 - Edit common information"),}) %]
-        [% CASE 'TemplateEdit2' %]
-            [% BreadcrumbPath.push({ Name => Translate("Step 2 of 5 - Edit object information"),}) %]
-        [% CASE 'TemplateEdit3' %]
-            [% BreadcrumbPath.push({ Name => Translate("Step 3 of 5 - Edit format information"),}) %]
-        [% CASE 'TemplateEdit4' %]
-            [% BreadcrumbPath.push({ Name => Translate("Step 4 of 5 - Edit mapping information"),}) %]
-        [% CASE 'TemplateEdit5' %]
-            [% BreadcrumbPath.push({ Name => Translate("Step 5 of 5 - Edit search information"),}) %]
-    [% END %]
-
-    [% INCLUDE "Breadcrumb.tt" Path = BreadcrumbPath %]
-
-    <div class="SidebarColumn">
+    <div class="SidebarColumn ActionsSideBarComp">
 
 [% RenderBlockStart("ActionList") %]
         <div class="WidgetSimple">
@@ -45,12 +22,12 @@
                 <ul class="ActionList">
 [% RenderBlockStart("ActionOverview") %]
                     <li>
-                        <a href="[% Env("Baselink") %]Action=[% Env("Action") %]" class="CallForAction Fullsize Center"><span><i class="fa fa-caret-left"></i>[% Translate("Go to overview") | html %]</span></a>
+                        <a href="[% Env("Baselink") %]Action=[% Env("Action") %]" class="CallForAction btn-primary btn-main btn-width-md"><span><i class="fa fa-caret-left"></i>[% Translate("Go to overview") | html %]</span></a>
                     </li>
 [% RenderBlockEnd("ActionOverview") %]
 [% RenderBlockStart("ActionAdd") %]
                     <li>
-                        <a href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=TemplateEdit1" class="CallForAction Fullsize Center"><span><i class="fa fa-plus-square"></i>[% Translate("Add template") | html %]</span></a>
+                        <a href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=TemplateEdit1" class="CallForAction btn-primary btn-main btn-width-md"><span><i class="fa fa-plus-square"></i>[% Translate("Add template") | html %]</span></a>
                     </li>
 [% RenderBlockEnd("ActionAdd") %]
                 </ul>
@@ -88,6 +65,28 @@
     </div>
 
     <div class="ContentColumn">
+        [% BreadcrumbPath = [
+                {
+                    Name => Translate('Import/Export Management'),
+                    Link => Env("Action"),
+                },
+            ]
+        %]
+
+        [% SWITCH Data.Subaction %]
+            [% CASE 'TemplateEdit1' %]
+                [% BreadcrumbPath.push({ Name => Translate("Step 1 of 5 - Edit common information"),}) %]
+            [% CASE 'TemplateEdit2' %]
+                [% BreadcrumbPath.push({ Name => Translate("Step 2 of 5 - Edit object information"),}) %]
+            [% CASE 'TemplateEdit3' %]
+                [% BreadcrumbPath.push({ Name => Translate("Step 3 of 5 - Edit format information"),}) %]
+            [% CASE 'TemplateEdit4' %]
+                [% BreadcrumbPath.push({ Name => Translate("Step 4 of 5 - Edit mapping information"),}) %]
+            [% CASE 'TemplateEdit5' %]
+                [% BreadcrumbPath.push({ Name => Translate("Step 5 of 5 - Edit search information"),}) %]
+        [% END %]
+
+        [% INCLUDE "Breadcrumb.tt" Path = BreadcrumbPath %]
         <div class="WidgetSimple">
 [% RenderBlockStart("OverviewList") %]
             <div class="Header">
@@ -102,8 +101,8 @@
                             <th>[% Translate("Format") | html %]</th>
                             <th>[% Translate("Validity") | html %]</th>
                             <th class="Center">[% Translate("Delete") | html %]</th>
-                            <th>[% Translate("Start Import") | html %]</th>
-                            <th>[% Translate("Start Export") | html %]</th>
+                            <th>[% Translate("Import") | html %]</th>
+                            <th>[% Translate("Export") | html %]</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -125,21 +124,19 @@
                             <td>[% Translate(Data.FormatName) | html %]</td>
                             <td>[% Translate(Data.Valid) | html %]</td>
 
-
                             <td class="Center">
-                                <a id="DeleteTemplateID[% Data.TemplateID %]" class="TrashCan ImportExportDelete" href="#" data-id="[% Data.TemplateID %]" title="[% Translate("Delete this template") | html %]">
-                                    [% Translate("Delete this template") | html %]
+                                <a id="DeleteTemplateID[% Data.TemplateID %]" class="TrashCan ImportExportDelete table-icon-hover-md" href="#" data-id="[% Data.TemplateID %]" title="[% Translate("Delete this template") | html %]">
                                     <i class="fa fa-trash-o"></i>
                                 </a>
                             </td>
                             <td>
-                                <a href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=ImportInformation;TemplateID=[% Data.TemplateID | uri %]">
-                                    [% Translate("Import") | html %]
+                                <a class="table-icon-hover-md" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=ImportInformation;TemplateID=[% Data.TemplateID | uri %]" title="[% Translate("Import") | html %]">
+                                    <i class="fa fa-caret-square-o-right"></i>
                                 </a>
                             </td>
                             <td>
-                                <a href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=Export;TemplateID=[% Data.TemplateID | uri %]">
-                                    [% Translate("Export") | html %]
+                                <a class="table-icon-hover-md" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction=Export;TemplateID=[% Data.TemplateID | uri %]" title="[% Translate("Export") | html %]">
+                                    <i class="fa fa-caret-square-o-right"></i>
                                 </a>
                             </td>
                         </tr>
@@ -157,84 +154,92 @@
                     <input type="hidden" name="TemplateID" value="[% Data.TemplateID %]" />
                     <input type="hidden" name="SubmitNext" value="1" />
 
-                    <fieldset class="TableLike">
+                    <fieldset class="TableLike no-padding">
 
-                        <label class="Mandatory" for="Name" ><span class="Marker">*</span> [% Translate("Name") | html %]:</label>
-                        <div class="Field">
+                        <div class="field-wrapper">
+                            <label class="Mandatory" for="Name" ><span class="Marker">*</span> [% Translate("Name") | html %]:</label>
+                            <div class="Field">
 
 <!-- Validate_Required -->
-                            <input id="Name" class="[% Data.NameClass %]" type="text" name="Name" value="[% Data.Name | html %]" size="50" maxlength="200" />
-                            <div id="NameError" class="TooltipErrorMessage">
-                                <p>[% Translate("Name is required!") | html %]</p>
+                                <input id="Name" class="[% Data.NameClass %]" type="text" name="Name" value="[% Data.Name | html %]" size="50" maxlength="200" />
+                                <div id="NameError" class="TooltipErrorMessage">
+                                    <p>[% Translate("Name is required!") | html %]</p>
+                                </div>
+                                <div id="NameServerError" class="TooltipErrorMessage">
+                                    <p>[% Translate("Name is required!") | html %]</p>
+                                </div>
                             </div>
-                            <div id="NameServerError" class="TooltipErrorMessage">
-                                <p>[% Translate("Name is required!") | html %]</p>
-                            </div>
-
                         </div>
-                        <div class="Clear"></div>
 
 [% RenderBlockStart("NewObjectFormat") %]
-                        <label class="Mandatory" for="Object"><span class="Marker">*</span> [% Translate("Object") | html %]:</label>
-                        <div class="Field">
+                        <div class="field-wrapper">
+                            <label class="Mandatory" for="Object"><span class="Marker">*</span> [% Translate("Object") | html %]:</label>
+                            <div class="Field">
 
-                            [% Data.ObjectOption %]
-                            <div id="ObjectError" class="TooltipErrorMessage">
-                                <p>[% Translate("Object is required!") | html %]</p>
-                            </div>
-                            <div id="ObjectServerError" class="TooltipErrorMessage">
-                                <p>[% Translate("Object is required!") | html %]</p>
-                            </div>
+                                [% Data.ObjectOption %]
+                                <div id="ObjectError" class="TooltipErrorMessage">
+                                    <p>[% Translate("Object is required!") | html %]</p>
+                                </div>
+                                <div id="ObjectServerError" class="TooltipErrorMessage">
+                                    <p>[% Translate("Object is required!") | html %]</p>
+                                </div>
 
+                            </div>
                         </div>
-                        <div class="Clear"></div>
 
-                        <label class="Mandatory" for="Format"><span class="Marker">*</span> [% Translate("Format") | html %]:</label>
-                        <div class="Field">
+                        <div class="field-wrapper">
+                            <label class="Mandatory" for="Format"><span class="Marker">*</span> [% Translate("Format") | html %]:</label>
+                            <div class="Field">
 
-                            [% Data.FormatOption %]
-                            <div id="FormatError" class="TooltipErrorMessage">
-                                <p>[% Translate("Format is required!") | html %]</p>
+                                [% Data.FormatOption %]
+                                <div id="FormatError" class="TooltipErrorMessage">
+                                    <p>[% Translate("Format is required!") | html %]</p>
+                                </div>
+                                <div id="FormatServerError" class="TooltipErrorMessage">
+                                    <p>[% Translate("Format is required!") | html %]</p>
+                                </div>
+
                             </div>
-                            <div id="FormatServerError" class="TooltipErrorMessage">
-                                <p>[% Translate("Format is required!") | html %]</p>
-                            </div>
-
                         </div>
 [% RenderBlockEnd("NewObjectFormat") %]
 [% RenderBlockStart("EditObjectFormat") %]
-                        <label>[% Translate("Object") | html %]:</label>
-                        <div class="Field">
-                            <span>[% Data.ObjectName | html %]</span>
-                            <input type="hidden" name="Object" value="[% Data.Object | html %]" />
+                        <div class="field-wrapper">
+                            <label>[% Translate("Object") | html %]:</label>
+                            <div class="Field">
+                                <span>[% Data.ObjectName | html %]</span>
+                                <input type="hidden" name="Object" value="[% Data.Object | html %]" />
+                            </div>
                         </div>
-                        <div class="Clear"></div>
 
-                        <label>[% Translate("Format") | html %]:</label>
-                        <div class="Field">
-                            <span>[% Data.FormatName | html %]</span>
-                            <input type="hidden" name="Format" value="[% Data.Format | html %]" />
+                        <div class="field-wrapper">
+                            <label>[% Translate("Format") | html %]:</label>
+                            <div class="Field">
+                                <span>[% Data.FormatName | html %]</span>
+                                <input type="hidden" name="Format" value="[% Data.Format | html %]" />
+                            </div>
                         </div>
 [% RenderBlockEnd("EditObjectFormat") %]
 
-                        <div class="Clear"></div>
-
-                        <label for="ValidID">[% Translate("Valid") | html %]:</label>
-                        <div class="Field">
-                            [% Data.ValidOptionStrg %]
+                        <div class="field-wrapper">
+                            <label for="ValidID">[% Translate("Valid") | html %]:</label>
+                            <div class="Field">
+                                [% Data.ValidOptionStrg %]
+                            </div>
                         </div>
-                        <div class="Clear"></div>
 
-                        <label for="Comment">[% Translate("Comment") | html %]:</label>
-                        <div class="Field">
-                            <input id="Comment" type="text" name="Comment" value="[% Data.Comment | html %]" size="50" maxlength="200" />
+                        <div class="field-wrapper">
+                            <label for="Comment">[% Translate("Comment") | html %]:</label>
+                            <div class="Field">
+                                <input id="Comment" type="text" name="Comment" value="[% Data.Comment | html %]" size="50" maxlength="200" />
+                            </div>
                         </div>
-                        <div class="Clear"></div>
 
-                        <div class="Field SpacingTop">
-                            <button class="Primary CallForAction" type="submit"><span>[% Translate("Next") | html %]</span></button>
-                            [% Translate("or") | html %]
-                            <a href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction='Overview'">[% Translate("Cancel") | html %] </a>
+                        <div class="field-wrapper form-button-actions">
+                            <div class="Field SpacingTop buttons-field">
+                                <button class="Primary CallForAction btn-primary btn-main btn-width-md" type="submit"><span>[% Translate("Next") | html %]</span></button>
+                                [% Translate("or") | html %]
+                                <a class="btn-main btn-cancel-ghost btn-width-md" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction='Overview'">[% Translate("Cancel") | html %] </a>
+                            </div>
                         </div>
                     </fieldset>
                 </form>
@@ -249,36 +254,42 @@
                     <input type="hidden" name="TemplateID" value="[% Data.TemplateID | html %]" />
                     <input type="hidden" name="SubmitNext" value="1" />
 
-                    <fieldset class="TableLike">
+                    <fieldset class="TableLike no-padding">
 
-                        <label>[% Translate("Name") | html %]:</label>
-                        <div class="Field">
-                            [% Data.Name | html %]
+                        <div class="field-wrapper">
+                            <label>[% Translate("Name") | html %]:</label>
+                            <div class="Field">
+                                [% Data.Name | html %]
+                            </div>
                         </div>
-                        <div class="Clear"></div>
 
-                        <label>[% Translate("Object") | html %]:</label>
-                        <div class="Field">
-                            [% Data.Object | html %]
+                        <div class="field-wrapper">
+                            <label>[% Translate("Object") | html %]:</label>
+                            <div class="Field">
+                                [% Data.Object | html %]
+                            </div>
                         </div>
-                        <div class="Clear"></div>
 
 [% RenderBlockStart("TemplateEdit2Element") %]
 
-                        <label [% IF Data.Mandatory %]class="Mandatory"[% END %] for="[% Data.ID %]">[% IF Data.Mandatory %]<span class="Marker">*</span> [% END %] [% Translate(Data.Name) | html %]: </label>
-                        <div class="Field">
-                            [% Data.InputStrg %]
-                            <div id="[% Data.ID %]Error" class="TooltipErrorMessage">
-                                <p>[% Translate(Data.ErrorMessage) | html %]</p>
-                            </div>
-                            <div id="[% Data.ID %]ServerError" class="TooltipErrorMessage">
-                                <p>[% Translate(Data.ErrorMessage) | html %]</p>
+                        <div class="field-wrapper">
+                            <label [% IF Data.Mandatory %]class="Mandatory"[% END %] for="[% Data.ID %]">[% IF Data.Mandatory %]<span class="Marker">*</span> [% END %] [% Translate(Data.Name) | html %]: </label>
+                            <div class="Field">
+                                [% Data.InputStrg %]
+                                <div id="[% Data.ID %]Error" class="TooltipErrorMessage">
+                                    <p>[% Translate(Data.ErrorMessage) | html %]</p>
+                                </div>
+                                <div id="[% Data.ID %]ServerError" class="TooltipErrorMessage">
+                                    <p>[% Translate(Data.ErrorMessage) | html %]</p>
+                                </div>
                             </div>
                         </div>
 [% RenderBlockEnd("TemplateEdit2Element") %]
-                        <div class="Field SpacingTop">
-                            <button class="Back CallForAction" type="button" name="Back" ><span>[% Translate("Back") | html %]</span></button>
-                            <button class="Primary CallForAction" type="submit"><span>[% Translate("Next") | html %]</span></button>
+                        <div class="field-wrapper form-button-actions">
+                            <div class="Field SpacingTop buttons-field">
+                                <button class="Back CallForAction btn-main btn-primary-ghost btn-width-md" type="button" name="Back" ><span>[% Translate("Back") | html %]</span></button>
+                                <button class="Primary CallForAction btn-primary btn-main btn-width-md" type="submit"><span>[% Translate("Next") | html %]</span></button>
+                            </div>
                         </div>
                     </fieldset>
                 </form>
@@ -293,37 +304,43 @@
                     <input type="hidden" name="TemplateID" value="[% Data.TemplateID | html %]" />
                     <input type="hidden" name="SubmitNext" value="1" />
 
-                    <fieldset class="TableLike">
+                    <fieldset class="TableLike no-padding">
 
-                        <label>[% Translate("Name") | html %]:</label>
-                        <div class="Field">
-                            [% Data.Name | html %]
+                        <div class="field-wrapper">
+                            <label>[% Translate("Name") | html %]:</label>
+                            <div class="Field">
+                                [% Data.Name | html %]
+                            </div>
                         </div>
-                        <div class="Clear"></div>
 
-                        <label>[% Translate("Format") | html %]:</label>
-                        <div class="Field">
-                            [% Data.Format | html %]
+                        <div class="field-wrapper">
+                            <label>[% Translate("Format") | html %]:</label>
+                            <div class="Field">
+                                [% Data.Format | html %]
+                            </div>
                         </div>
-                        <div class="Clear"></div>
 
 [% RenderBlockStart("TemplateEdit3Element") %]
-                        <label [% IF Data.Mandatory %]class="Mandatory"[% END %] for="[% Data.ID %]">[% IF Data.Mandatory %]<span class="Marker">*</span> [% END %] [% Translate(Data.Name) | html %]: </label>
-                        <div class="Field">
-                            [% Data.InputStrg %]
+                        <div class="field-wrapper">
+                            <label [% IF Data.Mandatory %]class="Mandatory"[% END %] for="[% Data.ID %]">[% IF Data.Mandatory %]<span class="Marker">*</span> [% END %] [% Translate(Data.Name) | html %]: </label>
+                            <div class="Field">
+                                [% Data.InputStrg %]
 [% RenderBlockStart("TemplateEdit3ElementRequired") %]
-                            <div id="[% Data.ID %]Error" class="TooltipErrorMessage">
-                                <p>[% Translate(Data.Name) | html %] [% Translate("is required!") | html %]</p>
-                            </div>
-                            <div id="[% Data.ID %]ServerError" class="TooltipErrorMessage">
-                                <p>[% Translate(Data.Name) | html %] [% Translate("is required!") | html %]</p>
-                            </div>
+                                <div id="[% Data.ID %]Error" class="TooltipErrorMessage">
+                                    <p>[% Translate(Data.Name) | html %] [% Translate("is required!") | html %]</p>
+                                </div>
+                                <div id="[% Data.ID %]ServerError" class="TooltipErrorMessage">
+                                    <p>[% Translate(Data.Name) | html %] [% Translate("is required!") | html %]</p>
+                                </div>
 [% RenderBlockEnd("TemplateEdit3ElementRequired") %]
+                            </div>
                         </div>
 [% RenderBlockEnd("TemplateEdit3Element") %]
-                        <div class="Field SpacingTop">
-                            <button class="Back CallForAction" type="button" name="Back" ><span>[% Translate("Back") | html %]</span></button>
-                            <button class="Primary CallForAction" type="submit"><span>[% Translate("Next") | html %]</span></button>
+                        <div class="field-wrapper form-button-actions">
+                            <div class="Field SpacingTop buttons-field">
+                                <button class="Back CallForAction btn-primary-ghost btn-main btn-width-md" type="button" name="Back" ><span>[% Translate("Back") | html %]</span></button>
+                                <button class="Primary CallForAction btn-primary btn-main btn-width-md" type="submit"><span>[% Translate("Next") | html %]</span></button>
+                            </div>
                         </div>
                     </fieldset>
                 </form>
@@ -334,23 +351,29 @@
             <div class="Content">
                 <div class="MapHeaderRow SpacingTop">
                     <div class="Header">
-                        <label>[% Translate("Name") | html %]:</label>
-                        <div class="Field">
-                            [% Data.Name | html %]
+                        <div class="field-wrapper">
+                            <label>[% Translate("Name") | html %]:</label>
+                            <div class="Field">
+                                [% Data.Name | html %]
+                            </div>
                         </div>
                     </div>
 
                     <div class="Header">
-                        <label>[% Translate("Object") | html %]:</label>
-                        <div class="Field">
-                            [% Data.ObjectName | html %]
+                        <div class="field-wrapper">
+                            <label>[% Translate("Object") | html %]:</label>
+                            <div class="Field">
+                                [% Data.ObjectName | html %]
+                            </div>
                         </div>
                     </div>
 
                     <div class="Header">
-                        <label>[% Translate("Format") | html %]:</label>
-                        <div class="Field">
-                            [% Data.FormatName | html %]
+                        <div class="field-wrapper">
+                            <label>[% Translate("Format") | html %]:</label>
+                            <div class="Field">
+                                [% Data.FormatName | html %]
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -391,7 +414,7 @@
 [% RenderBlockEnd("TemplateEdit4MapNumberColumn") %]
                                 <td class="Center">
 [% RenderBlockStart("TemplateEdit4UpButton") %]
-                                    <button class="ArrowUp"type="submit" name="MappingUp::[% Data.MappingID | html %]" value="[% Translate("Up") | html %]"> [% Translate("Up") | html %] </button>
+                                    <button class="ArrowUp" type="submit" name="MappingUp::[% Data.MappingID | html %]" value="[% Translate("Up") | html %]"> [% Translate("Up") | html %] </button>
 [% RenderBlockEnd("TemplateEdit4UpButton") %]
 [% RenderBlockStart("TemplateEdit4NoUpButton") %]
                                     <button class="ArrowUp" type="submit" disabled="disabled"> [% Translate("Up") | html %]</button>
@@ -407,7 +430,7 @@
                                 </td>
 
                                 <td class="Center">
-                                    <a href="#" class="DeleteColumn" title="[% Translate("Delete") | html %]">
+                                    <a href="#" class="DeleteColumn table-icon-hover-md" title="[% Translate("Delete") | html %]">
                                         <i class="fa fa-trash-o">
                                             <span class="InvisibleText">[% Translate("Delete") | html %]</span>
                                         </i>
@@ -420,12 +443,14 @@
                         </tbody>
                     </table>
                     <div class="W100pc SpacingTopSmall Left">
-                        <button class="CallForAction Plus" id="MappingAddButton" type="submit" name="MappingAddButton" value="[% Translate("Add") | html %]"><span><i class="fa fa-plus-square"></i>[% Translate("Add Mapping Element") | html %]</span> </button>
+                        <button class="CallForAction btn-primary btn-main Plus" id="MappingAddButton" type="submit" name="MappingAddButton" value="[% Translate("Add") | html %]"><span><i class="fa fa-plus-square"></i>[% Translate("Add Mapping Element") | html %]</span> </button>
                     </div>
 
-                    <div class="SpacingTop">
-                        <button class="Back CallForAction" type="submit" name="SubmitBack" value="SubmitBack"><span>[% Translate("Back") | html %]</span></button>
-                        <button class="Primary CallForAction" type="submit" name="SubmitNextButton" id="SubmitNextButton" value="1"><span>[% Translate("Next") | html %]</span></button>
+                    <div class="field-wrapper form-button-actions">
+                        <div class="SpacingTop buttons-field">
+                            <button class="Back CallForAction btn-primary-ghost btn-main btn-width-md" type="submit" name="SubmitBack" value="SubmitBack"><span>[% Translate("Back") | html %]</span></button>
+                            <button class="Primary CallForAction btn-primary btn-main btn-width-md" type="submit" name="SubmitNextButton" id="SubmitNextButton" value="1"><span>[% Translate("Next") | html %]</span></button>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -439,29 +464,35 @@
                     <input type="hidden" name="Subaction" value="TemplateSave5" />
                     <input type="hidden" name="TemplateID" value="[% Data.TemplateID | html %]" />
                     <input type="hidden" name="SubmitNext" value="1" />
-                    <fieldset class="TableLike">
-                        <label>[% Translate("Template Name") | html %]:</label>
-                        <div class="Field">
-                            [% Data.Name | html %]
+                    <fieldset class="TableLike no-padding">
+                        <div class="field-wrapper">
+                            <label>[% Translate("Template Name") | html %]:</label>
+                            <div class="Field">
+                                [% Data.Name | html %]
+                            </div>
                         </div>
-                        <div class="Clear"></div>
 
-                        <label for="RestrictExport">[% Translate("Restrict export per search") | html %]:</label>
-                        <div class="Field SpacingBottom">
-                            [% Data.RestrictExportStrg %]
+                        <div class="field-wrapper">
+                            <label for="RestrictExport">[% Translate("Restrict export per search") | html %]:</label>
+                            <div class="Field SpacingBottom">
+                                [% Data.RestrictExportStrg %]
+                            </div>
                         </div>
-                        <div class="Clear"></div>
 
 [% RenderBlockStart("TemplateEdit5Element") %]
-                        <label for="[% Data.ID %]">[% Translate(Data.Name) | html %]: </label>
-                        <div class="Field">
-                            [% Data.InputStrg %]
+                        <div class="Clear">
+                            <label for="[% Data.ID %]">[% Translate(Data.Name) | html %]: </label>
+                            <div class="Field">
+                                [% Data.InputStrg %]
+                            </div>
                         </div>
 [% RenderBlockEnd("TemplateEdit5Element") %]
 
-                        <div class="Field SpacingTop">
-                            <button class="Back CallForAction" type="submit" name="SubmitBack" value="SubmitBack"><span>[% Translate("Back") | html %]</span></button>
-                            <button class="Primary CallForAction" type="submit"><span>[% Translate("Finish") | html %]</span></button>
+                        <div class="field-wrapper form-button-actions">
+                            <div class="SpacingTop buttons-field">
+                                <button class="Back CallForAction btn-primary-ghost btn-main btn-width-md" type="submit" name="SubmitBack" value="SubmitBack"><span>[% Translate("Back") | html %]</span></button>
+                                <button class="Primary CallForAction btn-primary btn-main btn-width-md" type="submit"><span>[% Translate("Finish") | html %]</span></button>
+                            </div>
                         </div>
                     </fieldset>
                 </form>
@@ -478,27 +509,83 @@
                     <input type="hidden" name="Subaction" value="Import" />
                     <input type="hidden" name="TemplateID" value="[% Data.TemplateID | html %]" />
 
-                    <fieldset class="TableLike">
+                    <fieldset class="TableLike no-padding">
 
-                        <label for="SourceFile">[% Translate("Name") | html %]:</label>
-                        <div class="Field">
-                            [% Data.Name | html %]
+                        <div class="Clear">
+                            <label for="SourceFile">[% Translate("Name") | html %]:</label>
+                            <div class="Field">
+                                [% Data.Name | html %]
+                            </div>
                         </div>
-                        <div class="Clear"></div>
 
-                        <label for="SourceFile">[% Translate("Source File") | html %]:</label>
-                        <div class="Field">
-                            <input type="file" name="SourceFile" size="40" class="fixed" />
+                        <div class="Clear">
+                            <label for="SourceFile">[% Translate("Source File") | html %]:</label>
+                            <div class="Field">
+                                <input type="file" name="SourceFile" size="40" class="fixed" />
+                            </div>
                         </div>
-                        <div class="Clear"></div>
 
-                        <div class="Field SpacingTop">
-                            <button class="Primary CallForAction" type="submit" value="[% Translate("Start Import") | html %]"><span>[% Translate("Start Import") | html %]</span></button>
+                        <div class="field-wrapper form-button-actions">
+                            <div class="SpacingTop buttons-field">
+                                <button class="Primary CallForAction btn-primary btn-main btn-width-md" type="submit" value="[% Translate("Start Import") | html %]"><span>[% Translate("Start Import") | html %]</span></button>
+                            </div>
                         </div>
                     </fieldset>
                 </form>
             </div>
 [% RenderBlockEnd("ImportInformation") %]
+[% RenderBlockStart("ImportResult") %]
+            <div class="Header">
+                <h2>[% Translate("Import summary for %s", Data.Object) | html %]</h2>
+            </div>
+            <div class="Content">
+                <form action="[% Env("CGIHandle") %]" method="post" enctype="multipart/form-data">
+                    <input type="hidden" name="Action" value="[% Env("Action") %]"/>
+                    <input type="hidden" name="Subaction" value="Overview"/>
+
+                    <fieldset class="TableLike no-padding">
+                        <div class="Clear">
+                            <label>[% Translate("Records") | html %]:</label>
+                            <div class="Value">[% Data.Counter | html %]</div>
+                        </div>
+
+                        <div class="Clear">
+                            <label>[% Translate("Success") | html %]:</label>
+                            <div class="Value">
+                                [% Data.Success | html %]
+[% RenderBlockStart("ImportResultReturnCode") %]
+                                ([% Translate(Data.ReturnCodeName) | html %]: [% Data.ReturnCodeCount | html %])
+[% RenderBlockEnd("ImportResultReturnCode") %]
+                            </div>
+                        </div>
+
+                        <div class="Clear">
+                            <label>[% Translate("Failed") | html %]:</label>
+                            <div class="Value">[% Data.Failed | html %]</div>
+                        </div>
+
+[% RenderBlockStart("ImportResultDuplicateNames") %]
+                        <div class="Clear">
+                            <label>[% Translate("Duplicate names") | html %]:</label>
+                            <div class="Value">[% Data.DuplicateNames | html %]</div>
+                        </div>
+[% RenderBlockEnd("ImportResultDuplicateNames") %]
+
+[% RenderBlockStart("ImportResultLastLineNumber") %]
+                        <div class="Clear">
+                            <label>[% Translate("Last processed line number of import file") | html %]:</label>
+                            <div class="Value">[% Data.LastLineNumber | html %]</div>
+                        </div>
+[% RenderBlockEnd("ImportResultLastLineNumber") %]
+                        <div class="field-wrapper form-button-actions">
+                            <div class="SpacingTop buttons-field">
+                                <button class="Primary CallForAction btn-primary btn-main btn-width-md" type="submit" name="Ok" value="[% Translate("Ok") | html %]"><span>[% Translate("Ok") | html %]</span></button>
+                            </div>
+                        </div>
+                    </fieldset>
+            </form>
+            </div>
+[% RenderBlockEnd("ImportResult") %]
         </div>
     </div>
 
@@ -506,59 +593,6 @@
 
 [% RenderBlockEnd("Overview") %]
 
-[% RenderBlockStart("ImportResult") %]
-<div class="MainBox AriaRoleMain">
-    <div class="W50pc SpacingTopLarge SpacingBottomLarge CenterBox">
-        <div class="WidgetSimple">
-            <div class="Header">
-                <h2>[% Translate("Import summary for %s", Data.Object) | html %]</h2>
-            </div>
-            <div class="Content">
-
-                <form action="[% Env("CGIHandle") %]" method="post" enctype="multipart/form-data">
-                    <input type="hidden" name="Action" value="[% Env("Action") %]"/>
-                    <input type="hidden" name="Subaction" value="Overview"/>
-
-                    <fieldset class="TableLike">
-                        <label>[% Translate("Records") | html %]:</label>
-                        <div class="Value">[% Data.Counter | html %]</div>
-                        <div class="Clear"></div>
-
-                        <label>[% Translate("Success") | html %]:</label>
-                        <div class="Value">
-                            [% Data.Success | html %]
-[% RenderBlockStart("ImportResultReturnCode") %]
-                            ([% Translate(Data.ReturnCodeName) | html %]: [% Data.ReturnCodeCount | html %])
-[% RenderBlockEnd("ImportResultReturnCode") %]
-                        </div>
-                        <div class="Clear"></div>
-
-                        <label>[% Translate("Failed") | html %]:</label>
-                        <div class="Value">[% Data.Failed | html %]</div>
-                        <div class="Clear"></div>
-
-[% RenderBlockStart("ImportResultDuplicateNames") %]
-                        <label>[% Translate("Duplicate names") | html %]:</label>
-                        <div class="Value">[% Data.DuplicateNames | html %]</div>
-                        <div class="Clear"></div>
-[% RenderBlockEnd("ImportResultDuplicateNames") %]
-
-[% RenderBlockStart("ImportResultLastLineNumber") %]
-                        <label>[% Translate("Last processed line number of import file") | html %]:</label>
-                        <div class="Value">[% Data.LastLineNumber | html %]</div>
-                        <div class="Clear"></div>
-[% RenderBlockEnd("ImportResultLastLineNumber") %]
-                    </fieldset>
-
-                    <p class="Center SpacingTopSmall">
-                        <button class="Primary CallForAction" type="submit" name="Ok" value="[% Translate("Ok") | html %]"><span>[% Translate("Ok") | html %]</span></button>
-                    </p>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-[% RenderBlockEnd("ImportResult") %]
 
 <div class="Hidden" id="DeleteImportExportDialogContainer">
     <div id ="DeleteImportExportDialog" class="InnerContent">
