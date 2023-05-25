@@ -117,7 +117,9 @@ $Selenium->RunTest(
         );
         $Selenium->execute_script("\$('#Format').val('CSV').trigger('redraw.InputField').trigger('change');");
         $Selenium->find_element( "#Comment", 'css' )->send_keys('SeleniumTest');
-        $Selenium->find_element("//button[\@class='Primary CallForAction'][\@type='submit']")->VerifiedClick();
+        $Selenium->find_element(
+            "//button[\@class='Primary CallForAction btn-primary btn-main btn-width-md'][\@type='submit']"
+        )->VerifiedClick();
 
         # Check and input step 2 of 5 screen.
         for my $StepTwoID (
@@ -131,7 +133,9 @@ $Selenium->RunTest(
         $Selenium->execute_script(
             "\$('#ClassID').val('$LocationConfigItemID').trigger('redraw.InputField').trigger('change');"
         );
-        $Selenium->find_element("//button[\@class='Primary CallForAction'][\@type='submit']")->VerifiedClick();
+        $Selenium->find_element(
+            "//button[\@class='Primary CallForAction btn-primary btn-main btn-width-md'][\@type='submit']"
+        )->VerifiedClick();
 
         # Check and input step 3 of 5 screen.
         for my $StepThreeID (
@@ -145,7 +149,9 @@ $Selenium->RunTest(
         $Selenium->execute_script(
             "\$('#ColumnSeparator').val('Comma').trigger('redraw.InputField').trigger('change');"
         );
-        $Selenium->find_element("//button[\@class='Primary CallForAction'][\@type='submit']")->VerifiedClick();
+        $Selenium->find_element(
+            "//button[\@class='Primary CallForAction btn-primary btn-main btn-width-md'][\@type='submit']"
+        )->VerifiedClick();
 
         # Check and input step 4 of 5 screen.
         $Selenium->find_element( "#MappingAddButton", 'css' )->VerifiedClick();
@@ -206,7 +212,9 @@ $Selenium->RunTest(
             "\$('#DeplStateIDs').val('$ProductionDeplStateID').trigger('redraw.InputField').trigger('change');"
         );
         $Selenium->execute_script("\$('#InciStateIDs').val('1').trigger('redraw.InputField').trigger('change');");
-        $Selenium->find_element("//button[\@class='Primary CallForAction'][\@type='submit']")->VerifiedClick();
+        $Selenium->find_element(
+            "//button[\@class='Primary CallForAction btn-primary btn-main btn-width-md'][\@type='submit']"
+        )->VerifiedClick();
 
         # Get needed objects.
         my $ImportExportObject = $Kernel::OM->Get('Kernel::System::ImportExport');
@@ -267,10 +275,9 @@ $Selenium->RunTest(
 
         # Create test Exported file to a system.
         my $ExportFileName = "ITSMExport" . $Helper->GetRandomID() . ".csv";
-        my $ExportDir      = $Selenium->{'Home'} . "/var/tmp/";
-        my $ExportLocation = $ExportDir . $ExportFileName;
 
-        make_path $ExportDir or die "Failed to create path: $ExportDir";    ## no critic
+        my $ExportDir      = $ConfigObject->{'Home'} . "/var/tmp/";
+        my $ExportLocation = $ExportDir . $ExportFileName;
 
         my $Success = $MainObject->FileWrite(
             Location   => $ExportLocation,
@@ -291,8 +298,9 @@ $Selenium->RunTest(
         $Selenium->find_element("//a[contains(\@href, \'Subaction=ImportInformation;TemplateID=$TemplateID' )]")
             ->VerifiedClick();
 
-        # Select Exported file and start importing.
-        $Selenium->find_element("//input[contains(\@name, \'SourceFile' )]")->send_keys($ExportLocation);
+        # Upload file first into Selenium-environment to use it for file uploads.
+        my $LocalFile = $Selenium->upload_file($ExportLocation);
+        $Selenium->find_element("//input[contains(\@name, \'SourceFile' )]")->send_keys($LocalFile);
 
         $Selenium->find_element("//button[\@value='Start Import'][\@type='submit']")->VerifiedClick();
 
