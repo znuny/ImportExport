@@ -325,10 +325,10 @@ $Selenium->RunTest(
         $Selenium->find_element( "a.ImportExportDelete[data-id='$TemplateID']", 'css' )->click();
 
         $Selenium->WaitForjQueryEventBound(
-            CSSSelector => "#DialogButton1:visible",
+            CSSSelector => "#DialogButton2:visible",
         );
 
-        $Selenium->find_element( '#DialogButton1', 'css' )->click();
+        $Selenium->find_element( '#DialogButton2', 'css' )->click();
         $Selenium->WaitFor( ElementMissing => [ "a.ImportExportDelete[data-id='$TemplateID']", 'css' ] );
 
         # Check if test template is deleted.
