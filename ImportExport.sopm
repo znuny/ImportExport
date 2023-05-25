@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <otrs_package version="1.0">
     <Name>ImportExport</Name>
-    <Version>6.5.1</Version>
+    <Version>7.0.1</Version>
     <Framework>7.0.x</Framework>
     <PackageRequired Version="7.0.1">ITSMConfigurationManagement</PackageRequired>
     <Vendor>Znuny</Vendor>
@@ -11,6 +11,7 @@
     <Description Lang="de">Das ImportExport Paket.</Description>
     <Description Lang="es">El paquete ImportExport.</Description>
     <Description Lang="hu">Az ImportExport csomag.</Description>
+    <ChangeLog Version="7.0.1" Date="2023-05-25 15:22:28 +0200">Initial release for Znuny 7.0.</ChangeLog>
     <ChangeLog Version="6.5.1" Date="2023-02-20 15:58:14 +0100">Initial release for Znuny 6.5.</ChangeLog>
     <ChangeLog Version="6.4.3" Date="2022-11-08 21:45:03 +0100">Updated translations and added breadcrumb navigation to AdminImportExport dialog.</ChangeLog>
     <ChangeLog Version="6.4.2" Date="2022-07-28 15:14:47 +0200">Release for Znuny 6.4.2.</ChangeLog>
