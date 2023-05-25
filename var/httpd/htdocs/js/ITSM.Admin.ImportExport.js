@@ -124,8 +124,15 @@ ITSM.Admin = ITSM.Admin || {};
                 true,
                 [
                     {
-                        Class: 'Primary',
-                        Label: Core.Language.Translate("Confirm"),
+                        Type: 'Secondary',
+                        Label: Core.Language.Translate("Cancel"),
+                        Function: function () {
+                            Core.UI.Dialog.CloseDialog($('#DeleteImportExportDialog'));
+                        }
+                    },
+                    {
+                        Type: 'Warning',
+                        Label: Core.Language.Translate("Delete"),
                         Function: function() {
                             $('.Dialog .InnerContent .Center').text(Core.Language.Translate("Deleting template..."));
                             $('.Dialog .Content .ContentFooter').remove();
@@ -149,12 +156,6 @@ ITSM.Admin = ITSM.Admin || {};
                             );
                         }
                     },
-                    {
-                        Label: Core.Language.Translate("Cancel"),
-                        Function: function () {
-                            Core.UI.Dialog.CloseDialog($('#DeleteImportExportDialog'));
-                        }
-                    }
                 ]
             );
             return false;
