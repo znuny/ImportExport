@@ -4,8 +4,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-24 10:41+0000\n"
 "PO-Revision-Date: 2023-09-24 13:29+0000\n"
 "Last-Translator: Remy Larrieu <remy@larrieu.me>\n"
-"Language-Team: French <https://translations.znuny.org/projects/znuny-lts/"
-"importexport/fr/>\n"
+"Language-Team: French <https://translations.znuny.org/projects/znuny-lts/importexport/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,9 +28,6 @@ msgstr "Créer un modèle pour importer et exporter les informations d'objet"
 #, fuzzy
 msgid "To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported."
 msgstr ""
-"Pour utiliser ce module, vous devez installer ITSMConfigurationManagement ou "
-"tout autre paquet qui fournis une page d'administration pour les objets afin "
-"d'etre importé et exporté."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Start Import"
@@ -231,9 +227,7 @@ msgstr "Suppression du modèle..."
 
 #. JS File: var/httpd/htdocs/js/ITSM.Admin.ImportExport.js
 msgid "There was an error deleting the template. Please check the logs for more information."
-msgstr ""
-"Il y a eu une erreur lors de la suppression du modèle. Merci de regarder les "
-"journaux pour plus d'informations."
+msgstr "Il y a eu une erreur lors de la suppression du modèle. Merci de regarder les journaux pour plus d'informations."
 
 #. JS File: var/httpd/htdocs/js/ITSM.Admin.ImportExport.js
 msgid "Template was deleted successfully."
@@ -250,3 +244,4 @@ msgstr "Importer et exporter des informations d'objet"
 #. SysConfig
 msgid "Import/Export"
 msgstr "Importer/Exporter"
+

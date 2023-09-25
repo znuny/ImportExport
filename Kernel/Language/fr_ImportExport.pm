@@ -43,8 +43,8 @@ sub Data {
     $Self->{Translation}->{'Success'} = 'Réussi';
     $Self->{Translation}->{'Duplicate names'} = 'Noms en double';
     $Self->{Translation}->{'Last processed line number of import file'} = 'Numéro de la dernière ligne traitée dans le fichier d\'importation';
-    $Self->{Translation}->{'Ok'} = 'Ok';
-    $Self->{Translation}->{'Do you really want to delete this template item?'} = '';
+    $Self->{Translation}->{'Ok'} = 'Oui';
+    $Self->{Translation}->{'Do you really want to delete this template item?'} = 'Voulez-vous vraiment supprimer ce modèle ?';
 
     # Perl Module: Kernel/Modules/AdminImportExport.pm
     $Self->{Translation}->{'No object backend found!'} = 'Aucun objet "backend" n\'a été trouvé !';
@@ -75,10 +75,10 @@ sub Data {
     $Self->{Translation}->{'Column'} = 'Colonne';
 
     # JS File: var/httpd/htdocs/js/ITSM.Admin.ImportExport.js
-    $Self->{Translation}->{'Deleting template...'} = '';
+    $Self->{Translation}->{'Deleting template...'} = 'Suppression du modèle...';
     $Self->{Translation}->{'There was an error deleting the template. Please check the logs for more information.'} =
-        '';
-    $Self->{Translation}->{'Template was deleted successfully.'} = '';
+        'Il y a eu une erreur lors de la suppression du modèle. Merci de regarder les journaux pour plus d\'informations.';
+    $Self->{Translation}->{'Template was deleted successfully.'} = 'Le modèle a été supprimé avec succès.';
 
     # SysConfig
     $Self->{Translation}->{'Format backend module registration for the import/export module.'} =
