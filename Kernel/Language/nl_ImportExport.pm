@@ -28,7 +28,7 @@ sub Data {
         'Om deze module te gebruiken, moet u ITSMConfigurationManagement of een ander pakket installeren dat back-end biedt voor objecten die moeten worden geïmporteerd en geëxporteerd.';
     $Self->{Translation}->{'Start Import'} = 'Import starten';
     $Self->{Translation}->{'Start Export'} = 'Export starten';
-    $Self->{Translation}->{'Delete this template'} = 'Verwijder deze sjabloon';
+    $Self->{Translation}->{'Delete this template'} = 'Verwijder dit sjabloon';
     $Self->{Translation}->{'Name is required!'} = 'Naam is verplicht!';
     $Self->{Translation}->{'Object is required!'} = 'Object is verplicht!';
     $Self->{Translation}->{'Format is required!'} = 'Formaat is vereist!';
