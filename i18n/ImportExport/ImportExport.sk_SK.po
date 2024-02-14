@@ -2,15 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ImportExport\n"
 "POT-Creation-Date: 2020-01-24 10:41+0000\n"
-"PO-Revision-Date: 2022-01-21 10:51+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Slovak <https://translations.znuny.org/projects/znuny/importexport/sk/>\n"
+"PO-Revision-Date: 2024-02-14 23:18+0000\n"
+"Last-Translator: Dasa Mikulasova <dasa.mikulasova@sazp.sk>\n"
+"Language-Team: Slovak <https://translations.znuny.org/projects/znuny/"
+"importexport/sk/>\n"
 "Language: sk_SK\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 5.0.2\n"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Import/Export Management"
@@ -18,7 +19,7 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Add template"
-msgstr ""
+msgstr "Pridať šablónu"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Create a template to import and export object information."
@@ -30,23 +31,23 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Start Import"
-msgstr ""
+msgstr "Začať import"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Start Export"
-msgstr ""
+msgstr "Začať export"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Delete this template"
-msgstr ""
+msgstr "Vymazať túto šablónu"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Step 1 of 5 - Edit common information"
-msgstr ""
+msgstr "Krok 1 z 5 - Upraviť bežnú informáciu"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Name is required!"
-msgstr ""
+msgstr "Názov je povinný!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Object is required!"
@@ -102,7 +103,7 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Records"
-msgstr ""
+msgstr "Záznamy"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Success"
@@ -118,7 +119,7 @@ msgstr ""
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Ok"
-msgstr ""
+msgstr "Ok"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Do you really want to delete this template item?"
@@ -243,4 +244,3 @@ msgstr ""
 #. SysConfig
 msgid "Import/Export"
 msgstr ""
-
