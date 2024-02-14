@@ -17,17 +17,15 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
     $Self->{Translation}->{'Import/Export Management'} = 'Manajamen Impor/Ekspor';
+    $Self->{Translation}->{'Add template'} = 'Tambahkan templat';
+    $Self->{Translation}->{'Create a template to import and export object information.'} = 'Buat sebuah template untuk mengimpor dan ekspor obyek informasi.';
+    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
+        '';
     $Self->{Translation}->{'Step 1 of 5 - Edit common information'} = '';
     $Self->{Translation}->{'Step 2 of 5 - Edit object information'} = '';
     $Self->{Translation}->{'Step 3 of 5 - Edit format information'} = '';
     $Self->{Translation}->{'Step 4 of 5 - Edit mapping information'} = '';
     $Self->{Translation}->{'Step 5 of 5 - Edit search information'} = '';
-    $Self->{Translation}->{'Add template'} = 'Tambahkan templat';
-    $Self->{Translation}->{'Create a template to import and export object information.'} = 'Buat sebuah template untuk mengimpor dan ekspor obyek informasi.';
-    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
-        '';
-    $Self->{Translation}->{'Start Import'} = 'Mulai Impor';
-    $Self->{Translation}->{'Start Export'} = 'Mulai Ekspor';
     $Self->{Translation}->{'Delete this template'} = '';
     $Self->{Translation}->{'Name is required!'} = 'Nama dibutuhkan!';
     $Self->{Translation}->{'Object is required!'} = 'Obyek dibutuhkan!';
@@ -38,6 +36,7 @@ sub Data {
     $Self->{Translation}->{'Restrict export per search'} = 'Batas ekspor per pencarian';
     $Self->{Translation}->{'Import information'} = 'Informasi impor ';
     $Self->{Translation}->{'Source File'} = 'Berkas Sumber';
+    $Self->{Translation}->{'Start Import'} = 'Mulai Impor';
     $Self->{Translation}->{'Import summary for %s'} = '';
     $Self->{Translation}->{'Records'} = 'Data';
     $Self->{Translation}->{'Success'} = 'Berhasil';
@@ -89,7 +88,7 @@ sub Data {
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
     'Cancel',
-    'Confirm',
+    'Delete',
     'Delete this template',
     'Deleting template...',
     'Template was deleted successfully.',

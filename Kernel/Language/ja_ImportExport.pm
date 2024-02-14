@@ -17,17 +17,15 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
     $Self->{Translation}->{'Import/Export Management'} = 'インポート/エクスポートの管理';
+    $Self->{Translation}->{'Add template'} = 'テンプレートを追加';
+    $Self->{Translation}->{'Create a template to import and export object information.'} = 'オブジェクトのインポート・エクスポート用のテンプレートを作成する';
+    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
+        'このモジュールを利用するには、 ITSMConfigurationManagement か、オブジェクトのインポートおよびエクスポートの機能を提供するパッケージをインストールする必要があります。';
     $Self->{Translation}->{'Step 1 of 5 - Edit common information'} = 'Step 1 of 5 - 基本情報の設定';
     $Self->{Translation}->{'Step 2 of 5 - Edit object information'} = 'Step 2 of 5 - オブジェクト情報の設定';
     $Self->{Translation}->{'Step 3 of 5 - Edit format information'} = 'Step 3 of 5 - フォーマット情報の設定';
     $Self->{Translation}->{'Step 4 of 5 - Edit mapping information'} = 'Step 4 of 5 - マッピング情報の設定';
     $Self->{Translation}->{'Step 5 of 5 - Edit search information'} = 'Step 5 of 5 - 検索情報の設定';
-    $Self->{Translation}->{'Add template'} = 'テンプレートを追加';
-    $Self->{Translation}->{'Create a template to import and export object information.'} = 'オブジェクトのインポート・エクスポート用のテンプレートを作成する';
-    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
-        'このモジュールを利用するには、 ITSMConfigurationManagement か、オブジェクトのインポートおよびエクスポートの機能を提供するパッケージをインストールする必要があります。';
-    $Self->{Translation}->{'Start Import'} = 'インポート開始';
-    $Self->{Translation}->{'Start Export'} = 'エクスポート開始';
     $Self->{Translation}->{'Delete this template'} = '';
     $Self->{Translation}->{'Name is required!'} = '名称は必須です!';
     $Self->{Translation}->{'Object is required!'} = 'オブジェクトは必須です!';
@@ -38,6 +36,7 @@ sub Data {
     $Self->{Translation}->{'Restrict export per search'} = '検索あたりの出力を制限';
     $Self->{Translation}->{'Import information'} = '情報をインポート';
     $Self->{Translation}->{'Source File'} = 'ソースファイル';
+    $Self->{Translation}->{'Start Import'} = 'インポート開始';
     $Self->{Translation}->{'Import summary for %s'} = '%sのインポート・サマリー';
     $Self->{Translation}->{'Records'} = 'レコード';
     $Self->{Translation}->{'Success'} = '成功';
@@ -89,7 +88,7 @@ sub Data {
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
     'Cancel',
-    'Confirm',
+    'Delete',
     'Delete this template',
     'Deleting template...',
     'Template was deleted successfully.',

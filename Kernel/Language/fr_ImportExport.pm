@@ -17,17 +17,15 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
     $Self->{Translation}->{'Import/Export Management'} = 'Gestion de l\'importation/exportation';
+    $Self->{Translation}->{'Add template'} = 'Ajouter un modèle';
+    $Self->{Translation}->{'Create a template to import and export object information.'} = 'Créer un modèle pour importer et exporter les informations d\'objet';
+    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
+        '';
     $Self->{Translation}->{'Step 1 of 5 - Edit common information'} = 'Étape 1 sur 5 - Éditer les information communes';
     $Self->{Translation}->{'Step 2 of 5 - Edit object information'} = 'Étape 2 sur 5 - Éditer les informations de l\'objet';
     $Self->{Translation}->{'Step 3 of 5 - Edit format information'} = 'Étape 3 sur 5 - Éditer les informations du format';
     $Self->{Translation}->{'Step 4 of 5 - Edit mapping information'} = 'Étape 4 sur 5 - Éditer les informations de mappage';
     $Self->{Translation}->{'Step 5 of 5 - Edit search information'} = 'Étape 5 sur 5 - Éditer les informations de recherche';
-    $Self->{Translation}->{'Add template'} = 'Ajouter un modèle';
-    $Self->{Translation}->{'Create a template to import and export object information.'} = 'Créer un modèle pour importer et exporter les informations d\'objet';
-    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
-        '';
-    $Self->{Translation}->{'Start Import'} = 'Démarrer l\'import';
-    $Self->{Translation}->{'Start Export'} = 'Démarrer l\'export';
     $Self->{Translation}->{'Delete this template'} = 'Supprimer ce modèle';
     $Self->{Translation}->{'Name is required!'} = 'Un nom est requis !';
     $Self->{Translation}->{'Object is required!'} = 'Un objet est requis !';
@@ -38,6 +36,7 @@ sub Data {
     $Self->{Translation}->{'Restrict export per search'} = 'Restreindre l\'exportation par recherche';
     $Self->{Translation}->{'Import information'} = 'Informations d\'importation';
     $Self->{Translation}->{'Source File'} = 'Fichier source';
+    $Self->{Translation}->{'Start Import'} = 'Démarrer l\'import';
     $Self->{Translation}->{'Import summary for %s'} = 'Importer le résumé pour %s';
     $Self->{Translation}->{'Records'} = 'Enregistrements';
     $Self->{Translation}->{'Success'} = 'Réussi';
@@ -89,7 +88,7 @@ sub Data {
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
     'Cancel',
-    'Confirm',
+    'Delete',
     'Delete this template',
     'Deleting template...',
     'Template was deleted successfully.',

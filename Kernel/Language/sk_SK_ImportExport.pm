@@ -17,19 +17,17 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
     $Self->{Translation}->{'Import/Export Management'} = '';
-    $Self->{Translation}->{'Step 1 of 5 - Edit common information'} = '';
+    $Self->{Translation}->{'Add template'} = 'Pridať šablónu';
+    $Self->{Translation}->{'Create a template to import and export object information.'} = '';
+    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
+        '';
+    $Self->{Translation}->{'Step 1 of 5 - Edit common information'} = 'Krok 1 z 5 - Upraviť bežnú informáciu';
     $Self->{Translation}->{'Step 2 of 5 - Edit object information'} = '';
     $Self->{Translation}->{'Step 3 of 5 - Edit format information'} = '';
     $Self->{Translation}->{'Step 4 of 5 - Edit mapping information'} = '';
     $Self->{Translation}->{'Step 5 of 5 - Edit search information'} = '';
-    $Self->{Translation}->{'Add template'} = '';
-    $Self->{Translation}->{'Create a template to import and export object information.'} = '';
-    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
-        '';
-    $Self->{Translation}->{'Start Import'} = '';
-    $Self->{Translation}->{'Start Export'} = '';
-    $Self->{Translation}->{'Delete this template'} = '';
-    $Self->{Translation}->{'Name is required!'} = '';
+    $Self->{Translation}->{'Delete this template'} = 'Vymazať túto šablónu';
+    $Self->{Translation}->{'Name is required!'} = 'Názov je povinný!';
     $Self->{Translation}->{'Object is required!'} = '';
     $Self->{Translation}->{'Format is required!'} = '';
     $Self->{Translation}->{'is required!'} = '';
@@ -38,12 +36,13 @@ sub Data {
     $Self->{Translation}->{'Restrict export per search'} = '';
     $Self->{Translation}->{'Import information'} = '';
     $Self->{Translation}->{'Source File'} = '';
+    $Self->{Translation}->{'Start Import'} = 'Začať import';
     $Self->{Translation}->{'Import summary for %s'} = '';
-    $Self->{Translation}->{'Records'} = '';
+    $Self->{Translation}->{'Records'} = 'Záznamy';
     $Self->{Translation}->{'Success'} = '';
     $Self->{Translation}->{'Duplicate names'} = '';
     $Self->{Translation}->{'Last processed line number of import file'} = '';
-    $Self->{Translation}->{'Ok'} = '';
+    $Self->{Translation}->{'Ok'} = 'Ok';
     $Self->{Translation}->{'Do you really want to delete this template item?'} = '';
 
     # Perl Module: Kernel/Modules/AdminImportExport.pm
@@ -89,7 +88,7 @@ sub Data {
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
     'Cancel',
-    'Confirm',
+    'Delete',
     'Delete this template',
     'Deleting template...',
     'Template was deleted successfully.',

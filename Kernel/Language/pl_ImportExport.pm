@@ -17,17 +17,15 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
     $Self->{Translation}->{'Import/Export Management'} = 'Zarządzanie Importem/Exportem';
+    $Self->{Translation}->{'Add template'} = 'Dodaj szablon';
+    $Self->{Translation}->{'Create a template to import and export object information.'} = 'Utwórz szablon do importu i eksportu danych obiektów.';
+    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
+        'Aby używać tego modułu musisz zainstalować ITSMConfigurationManagement lub inny pakiet dostarczający zaplecze do importu i eksportu obiektów.';
     $Self->{Translation}->{'Step 1 of 5 - Edit common information'} = 'Krok 1 z 5 - Edycja danych ogólnych';
     $Self->{Translation}->{'Step 2 of 5 - Edit object information'} = 'Krok 2 z 5 - Edycja danych obiektowych';
     $Self->{Translation}->{'Step 3 of 5 - Edit format information'} = 'Krok 3 z 5 - Edycja danych formatu';
     $Self->{Translation}->{'Step 4 of 5 - Edit mapping information'} = 'Krok 4 z 5 - Edycja danych mapowania';
     $Self->{Translation}->{'Step 5 of 5 - Edit search information'} = 'Krok 5 z 5 - Edycja danych wyszukiwania';
-    $Self->{Translation}->{'Add template'} = 'Dodaj szablon';
-    $Self->{Translation}->{'Create a template to import and export object information.'} = 'Utwórz szablon do importu i eksportu danych obiektów.';
-    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
-        'Aby używać tego modułu musisz zainstalować ITSMConfigurationManagement lub inny pakiet dostarczający zaplecze do importu i eksportu obiektów.';
-    $Self->{Translation}->{'Start Import'} = 'Rozpocznij import';
-    $Self->{Translation}->{'Start Export'} = 'Rozpocznij eksport';
     $Self->{Translation}->{'Delete this template'} = 'Usuń ten szablon';
     $Self->{Translation}->{'Name is required!'} = 'Nazwa jest wymagana!';
     $Self->{Translation}->{'Object is required!'} = 'Obiekt jest wymagany!';
@@ -38,6 +36,7 @@ sub Data {
     $Self->{Translation}->{'Restrict export per search'} = 'Ogranicz eksport przez wyszukanie';
     $Self->{Translation}->{'Import information'} = 'Importuj informacje';
     $Self->{Translation}->{'Source File'} = 'Plik źródłowy';
+    $Self->{Translation}->{'Start Import'} = 'Rozpocznij import';
     $Self->{Translation}->{'Import summary for %s'} = 'Podsumowanie importu dla %s';
     $Self->{Translation}->{'Records'} = 'Rekordy';
     $Self->{Translation}->{'Success'} = 'Powodzenie';
@@ -89,7 +88,7 @@ sub Data {
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
     'Cancel',
-    'Confirm',
+    'Delete',
     'Delete this template',
     'Deleting template...',
     'Template was deleted successfully.',

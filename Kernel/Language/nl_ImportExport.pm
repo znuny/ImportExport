@@ -17,17 +17,15 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
     $Self->{Translation}->{'Import/Export Management'} = 'Import/Export Management';
+    $Self->{Translation}->{'Add template'} = 'Sjabloon toevoegen';
+    $Self->{Translation}->{'Create a template to import and export object information.'} = 'Maak een sjabloon om objectinformatie te importeren en exporteren.';
+    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
+        'Om deze module te gebruiken, moet u ITSMConfigurationManagement of een ander pakket installeren dat back-end biedt voor objecten die moeten worden geïmporteerd en geëxporteerd.';
     $Self->{Translation}->{'Step 1 of 5 - Edit common information'} = 'Stap 1 van 5 - Bewerk algemene informatie';
     $Self->{Translation}->{'Step 2 of 5 - Edit object information'} = 'Stap 2 van 5 - Bewerk objectinformatie';
     $Self->{Translation}->{'Step 3 of 5 - Edit format information'} = 'Stap 3 van 5 - Bewerk fromaatinformatie';
     $Self->{Translation}->{'Step 4 of 5 - Edit mapping information'} = 'Stap 4 van 5 - Bewerk de toewijzingsinformatie';
     $Self->{Translation}->{'Step 5 of 5 - Edit search information'} = 'Stap 5 van 5 - Bewerk zoekinformatie';
-    $Self->{Translation}->{'Add template'} = 'Sjabloon toevoegen';
-    $Self->{Translation}->{'Create a template to import and export object information.'} = 'Maak een sjabloon om objectinformatie te importeren en exporteren.';
-    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
-        'Om deze module te gebruiken, moet u ITSMConfigurationManagement of een ander pakket installeren dat back-end biedt voor objecten die moeten worden geïmporteerd en geëxporteerd.';
-    $Self->{Translation}->{'Start Import'} = 'Import starten';
-    $Self->{Translation}->{'Start Export'} = 'Export starten';
     $Self->{Translation}->{'Delete this template'} = 'Verwijder deze sjabloon';
     $Self->{Translation}->{'Name is required!'} = 'Naam is verplicht!';
     $Self->{Translation}->{'Object is required!'} = 'Object is verplicht!';
@@ -38,6 +36,7 @@ sub Data {
     $Self->{Translation}->{'Restrict export per search'} = 'Export beperken met zoeken';
     $Self->{Translation}->{'Import information'} = 'Importinformatie';
     $Self->{Translation}->{'Source File'} = 'Bron bestand';
+    $Self->{Translation}->{'Start Import'} = 'Import starten';
     $Self->{Translation}->{'Import summary for %s'} = 'Importeer samenvatting voor %s';
     $Self->{Translation}->{'Records'} = 'Records';
     $Self->{Translation}->{'Success'} = 'Succes';
@@ -89,7 +88,7 @@ sub Data {
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
     'Cancel',
-    'Confirm',
+    'Delete',
     'Delete this template',
     'Deleting template...',
     'Template was deleted successfully.',

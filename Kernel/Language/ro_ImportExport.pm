@@ -17,17 +17,15 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
     $Self->{Translation}->{'Import/Export Management'} = 'Management import/export';
+    $Self->{Translation}->{'Add template'} = '';
+    $Self->{Translation}->{'Create a template to import and export object information.'} = 'Crează un șablon pentru import/export informații obiecte.';
+    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
+        '';
     $Self->{Translation}->{'Step 1 of 5 - Edit common information'} = 'Pasul 1 din 5 - Editează informații generale';
     $Self->{Translation}->{'Step 2 of 5 - Edit object information'} = 'Pasul 2 din 5 - Editează informații despre obiect';
     $Self->{Translation}->{'Step 3 of 5 - Edit format information'} = 'Pasul 3 din 5 - Editeaza informații despre format';
     $Self->{Translation}->{'Step 4 of 5 - Edit mapping information'} = 'Pasul 4 din 5 - Editează informații despre asocieri';
     $Self->{Translation}->{'Step 5 of 5 - Edit search information'} = 'Pasul 5 din 5 - Editează informații de căutare';
-    $Self->{Translation}->{'Add template'} = '';
-    $Self->{Translation}->{'Create a template to import and export object information.'} = 'Crează un șablon pentru import/export informații obiecte.';
-    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
-        '';
-    $Self->{Translation}->{'Start Import'} = 'Start Import';
-    $Self->{Translation}->{'Start Export'} = 'Start Export';
     $Self->{Translation}->{'Delete this template'} = '';
     $Self->{Translation}->{'Name is required!'} = 'Este necesara introducerea numelui!';
     $Self->{Translation}->{'Object is required!'} = 'Obiectul este cerut!';
@@ -38,6 +36,7 @@ sub Data {
     $Self->{Translation}->{'Restrict export per search'} = 'Limitează exportul la rezultatele căutarii';
     $Self->{Translation}->{'Import information'} = 'Importă informațiile';
     $Self->{Translation}->{'Source File'} = 'Fișier sursă';
+    $Self->{Translation}->{'Start Import'} = 'Start Import';
     $Self->{Translation}->{'Import summary for %s'} = 'Rezumat import pentru %s';
     $Self->{Translation}->{'Records'} = 'Înregistrări';
     $Self->{Translation}->{'Success'} = 'Succes';
@@ -89,7 +88,7 @@ sub Data {
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
     'Cancel',
-    'Confirm',
+    'Delete',
     'Delete this template',
     'Deleting template...',
     'Template was deleted successfully.',

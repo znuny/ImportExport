@@ -17,17 +17,15 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
     $Self->{Translation}->{'Import/Export Management'} = 'Внеси/Изнеси Менаџмент';
+    $Self->{Translation}->{'Add template'} = 'Додади шаблон';
+    $Self->{Translation}->{'Create a template to import and export object information.'} = 'Креирај шаблон за внесени и изнесени објект информации';
+    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
+        '';
     $Self->{Translation}->{'Step 1 of 5 - Edit common information'} = '';
     $Self->{Translation}->{'Step 2 of 5 - Edit object information'} = '';
     $Self->{Translation}->{'Step 3 of 5 - Edit format information'} = '';
     $Self->{Translation}->{'Step 4 of 5 - Edit mapping information'} = '';
     $Self->{Translation}->{'Step 5 of 5 - Edit search information'} = '';
-    $Self->{Translation}->{'Add template'} = 'Додади шаблон';
-    $Self->{Translation}->{'Create a template to import and export object information.'} = 'Креирај шаблон за внесени и изнесени објект информации';
-    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
-        '';
-    $Self->{Translation}->{'Start Import'} = 'Започни внесување';
-    $Self->{Translation}->{'Start Export'} = 'Започни излез';
     $Self->{Translation}->{'Delete this template'} = '';
     $Self->{Translation}->{'Name is required!'} = 'Потребно е име!';
     $Self->{Translation}->{'Object is required!'} = 'Потребен е објект!';
@@ -38,6 +36,7 @@ sub Data {
     $Self->{Translation}->{'Restrict export per search'} = 'Ограничи излезни барања';
     $Self->{Translation}->{'Import information'} = 'Влезни Информации';
     $Self->{Translation}->{'Source File'} = 'Изворен податок';
+    $Self->{Translation}->{'Start Import'} = 'Започни внесување';
     $Self->{Translation}->{'Import summary for %s'} = '';
     $Self->{Translation}->{'Records'} = 'Снимки';
     $Self->{Translation}->{'Success'} = 'Успешно';
@@ -89,7 +88,7 @@ sub Data {
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
     'Cancel',
-    'Confirm',
+    'Delete',
     'Delete this template',
     'Deleting template...',
     'Template was deleted successfully.',

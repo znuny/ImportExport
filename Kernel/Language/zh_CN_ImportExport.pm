@@ -17,17 +17,15 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
     $Self->{Translation}->{'Import/Export Management'} = '导入/导出管理';
+    $Self->{Translation}->{'Add template'} = '添加模板';
+    $Self->{Translation}->{'Create a template to import and export object information.'} = '创建模板导入和导出对象信息。';
+    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
+        '要使用此模块，您需要安装ITSMConfigurationManagement或为要导入和导出的对象提供后端的任何其它软件包。';
     $Self->{Translation}->{'Step 1 of 5 - Edit common information'} = '步骤 1/5 - 编辑通用信息';
     $Self->{Translation}->{'Step 2 of 5 - Edit object information'} = '步骤 2/5 - 编辑对象信息';
     $Self->{Translation}->{'Step 3 of 5 - Edit format information'} = '步骤 3/5 - 编辑格式信息';
     $Self->{Translation}->{'Step 4 of 5 - Edit mapping information'} = '步骤 4/5 - 编辑映射信息';
     $Self->{Translation}->{'Step 5 of 5 - Edit search information'} = '步骤 5/5 - 编辑搜索信息';
-    $Self->{Translation}->{'Add template'} = '添加模板';
-    $Self->{Translation}->{'Create a template to import and export object information.'} = '创建模板导入和导出对象信息。';
-    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
-        '要使用此模块，您需要安装ITSMConfigurationManagement或为要导入和导出的对象提供后端的任何其它软件包。';
-    $Self->{Translation}->{'Start Import'} = '开始导入';
-    $Self->{Translation}->{'Start Export'} = '开始导出';
     $Self->{Translation}->{'Delete this template'} = '删除此模板';
     $Self->{Translation}->{'Name is required!'} = '名称是必需的！';
     $Self->{Translation}->{'Object is required!'} = '对象是必需的！';
@@ -38,6 +36,7 @@ sub Data {
     $Self->{Translation}->{'Restrict export per search'} = '按搜索限制导出';
     $Self->{Translation}->{'Import information'} = '导入信息';
     $Self->{Translation}->{'Source File'} = '源文件';
+    $Self->{Translation}->{'Start Import'} = '开始导入';
     $Self->{Translation}->{'Import summary for %s'} = '%s的导入摘要';
     $Self->{Translation}->{'Records'} = '记录';
     $Self->{Translation}->{'Success'} = '成功';
@@ -89,7 +88,7 @@ sub Data {
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
     'Cancel',
-    'Confirm',
+    'Delete',
     'Delete this template',
     'Deleting template...',
     'Template was deleted successfully.',

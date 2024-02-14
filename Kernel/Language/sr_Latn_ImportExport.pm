@@ -17,17 +17,15 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
     $Self->{Translation}->{'Import/Export Management'} = 'Uvoz/Izvoz upravljanje';
+    $Self->{Translation}->{'Add template'} = 'Dodaj šablon';
+    $Self->{Translation}->{'Create a template to import and export object information.'} = 'Kreiraj šablon za uvoz i izvoz informacija o objektu.';
+    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
+        'Za korišćenje ovog modula, morate instalirati ITSMConfigurationManagement ili neki drugi paket koji obezbeđuje pozadinske module za entitete uvoza i izvoza.';
     $Self->{Translation}->{'Step 1 of 5 - Edit common information'} = 'Korak 1 od 5 - Uredi zajedničke informacije';
     $Self->{Translation}->{'Step 2 of 5 - Edit object information'} = 'Korak 2 od 5 - Uredi informacije o objektu';
     $Self->{Translation}->{'Step 3 of 5 - Edit format information'} = 'Korak 3 od 5 - Uredi informacije o formatu';
     $Self->{Translation}->{'Step 4 of 5 - Edit mapping information'} = 'Korak 4 od 5 - Uredi informacije o mapiranju';
     $Self->{Translation}->{'Step 5 of 5 - Edit search information'} = 'Korak 5 od 5 - Uredi informacije za pretragu';
-    $Self->{Translation}->{'Add template'} = 'Dodaj šablon';
-    $Self->{Translation}->{'Create a template to import and export object information.'} = 'Kreiraj šablon za uvoz i izvoz informacija o objektu.';
-    $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
-        'Za korišćenje ovog modula, morate instalirati ITSMConfigurationManagement ili neki drugi paket koji obezbeđuje pozadinske module za entitete uvoza i izvoza.';
-    $Self->{Translation}->{'Start Import'} = 'Počni uvoz';
-    $Self->{Translation}->{'Start Export'} = 'Počni izvoz';
     $Self->{Translation}->{'Delete this template'} = 'Obriši ovaj šablon';
     $Self->{Translation}->{'Name is required!'} = 'Ime je obavezno!';
     $Self->{Translation}->{'Object is required!'} = 'Objekt je obavezan!';
@@ -38,6 +36,7 @@ sub Data {
     $Self->{Translation}->{'Restrict export per search'} = 'Ograničenje izvoza po pretrazi';
     $Self->{Translation}->{'Import information'} = 'Uvoz informacija';
     $Self->{Translation}->{'Source File'} = 'Izvorna datoteka';
+    $Self->{Translation}->{'Start Import'} = 'Počni uvoz';
     $Self->{Translation}->{'Import summary for %s'} = 'Rezime uvoza za %s';
     $Self->{Translation}->{'Records'} = 'Zapisi';
     $Self->{Translation}->{'Success'} = 'Uspešno';
@@ -89,7 +88,7 @@ sub Data {
 
     push @{ $Self->{JavaScriptStrings} // [] }, (
     'Cancel',
-    'Confirm',
+    'Delete',
     'Delete this template',
     'Deleting template...',
     'Template was deleted successfully.',
