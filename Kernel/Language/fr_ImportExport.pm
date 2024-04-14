@@ -18,9 +18,9 @@ sub Data {
     # TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
     $Self->{Translation}->{'Import/Export Management'} = 'Gestion de l\'importation/exportation';
     $Self->{Translation}->{'Add template'} = 'Ajouter un modèle';
-    $Self->{Translation}->{'Create a template to import and export object information.'} = 'Créer un modèle pour importer et exporter les informations d\'objet';
+    $Self->{Translation}->{'Create a template to import and export object information.'} = 'Créer un modèle pour importer et exporter des informations sur les objets.';
     $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
-        '';
+        'Pour utiliser ce module, vous devez installer ITSMConfigurationManagement ou tout autre package fournissant un backend pour l\'importation et l\'exportation d\'objets.';
     $Self->{Translation}->{'Step 1 of 5 - Edit common information'} = 'Étape 1 sur 5 - Éditer les information communes';
     $Self->{Translation}->{'Step 2 of 5 - Edit object information'} = 'Étape 2 sur 5 - Éditer les informations de l\'objet';
     $Self->{Translation}->{'Step 3 of 5 - Edit format information'} = 'Étape 3 sur 5 - Éditer les informations du format';

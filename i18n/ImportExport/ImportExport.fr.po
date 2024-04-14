@@ -4,8 +4,7 @@ msgstr ""
 "POT-Creation-Date: 2020-01-24 10:41+0000\n"
 "PO-Revision-Date: 2024-04-14 07:55+0000\n"
 "Last-Translator: Jaime Pires <jaime_pires92@hotmail.fr>\n"
-"Language-Team: French <https://translations.znuny.org/projects/znuny/"
-"importexport/fr/>\n"
+"Language-Team: French <https://translations.znuny.org/projects/znuny/importexport/fr/>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,15 +22,11 @@ msgstr "Ajouter un modèle"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Create a template to import and export object information."
-msgstr ""
-"Créer un modèle pour importer et exporter des informations sur les objets."
+msgstr "Créer un modèle pour importer et exporter des informations sur les objets."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported."
-msgstr ""
-"Pour utiliser ce module, vous devez installer ITSMConfigurationManagement ou "
-"tout autre package fournissant un backend pour l'importation et "
-"l'exportation d'objets."
+msgstr "Pour utiliser ce module, vous devez installer ITSMConfigurationManagement ou tout autre package fournissant un backend pour l'importation et l'exportation d'objets."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Start Import"
@@ -248,3 +243,4 @@ msgstr "Importer et exporter des informations d'objet"
 #. SysConfig
 msgid "Import/Export"
 msgstr "Importer/Exporter"
+
