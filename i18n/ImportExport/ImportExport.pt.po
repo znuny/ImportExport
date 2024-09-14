@@ -2,15 +2,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ImportExport\n"
 "POT-Creation-Date: 2020-01-24 10:41+0000\n"
-"PO-Revision-Date: 2022-01-21 10:51+0000\n"
-"Last-Translator: Anonymous <noreply@weblate.org>\n"
-"Language-Team: Portuguese <https://translations.znuny.org/projects/znuny/importexport/pt/>\n"
+"PO-Revision-Date: 2024-09-14 00:37+0000\n"
+"Last-Translator: aderito <aderito.pina@gmail.com>\n"
+"Language-Team: Portuguese <https://translations.znuny.org/projects/znuny-lts/"
+"importexport/pt/>\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Import/Export Management"
@@ -18,7 +19,7 @@ msgstr "Gestão de Importação/Exportação"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Add template"
-msgstr ""
+msgstr "Adicionar modelo"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Create a template to import and export object information."
@@ -27,6 +28,9 @@ msgstr "Criar um modelo para importar e exportar informações de objeto."
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported."
 msgstr ""
+"Para utilizar este módulo, é necessário instalar o "
+"ITSMConfigurationManagement ou qualquer outro pacote que forneça o back end "
+"para os objetos a importar e exportar."
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Start Import"
@@ -38,11 +42,11 @@ msgstr "Iniciar Exportação"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Delete this template"
-msgstr ""
+msgstr "Eliminar este modelo"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Step 1 of 5 - Edit common information"
-msgstr ""
+msgstr "Passo 1 de 5 - Editar informações comuns"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Name is required!"
@@ -58,11 +62,11 @@ msgstr "O formato é obrigatório!"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Step 2 of 5 - Edit object information"
-msgstr ""
+msgstr "Passo 2 de 5 - Editar informações de objetos"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Step 3 of 5 - Edit format information"
-msgstr ""
+msgstr "Passo 3 de 5 - Editar informações de formatação"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "is required!"
@@ -98,7 +102,7 @@ msgstr "Arquivo de Origem"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Import summary for %s"
-msgstr ""
+msgstr "Resumo da importação de %s"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Records"
@@ -122,27 +126,27 @@ msgstr "Ok"
 
 #. TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
 msgid "Do you really want to delete this template item?"
-msgstr ""
+msgstr "Pretende mesmo apagar este item do modelo?"
 
 #. Perl Module: Kernel/Modules/AdminImportExport.pm
 msgid "No object backend found!"
-msgstr ""
+msgstr "Não foi encontrado nenhum objeto backend!"
 
 #. Perl Module: Kernel/Modules/AdminImportExport.pm
 msgid "No format backend found!"
-msgstr ""
+msgstr "Não foi encontrado nenhum formato backend!"
 
 #. Perl Module: Kernel/Modules/AdminImportExport.pm
 msgid "Template not found!"
-msgstr ""
+msgstr "Modelo não encontrado!"
 
 #. Perl Module: Kernel/Modules/AdminImportExport.pm
 msgid "Can't insert/update template!"
-msgstr ""
+msgstr "Não é possível inserir/atualizar o modelo!"
 
 #. Perl Module: Kernel/Modules/AdminImportExport.pm
 msgid "Needed TemplateID!"
-msgstr ""
+msgstr "Necessário TemplateID!"
 
 #. Perl Module: Kernel/Modules/AdminImportExport.pm
 msgid "Error occurred. Import impossible! See Syslog for details."
@@ -154,35 +158,35 @@ msgstr "Ocorreu um erro.Exportação impossível!Verificar Syslog para detalhes.
 
 #. Perl Module: Kernel/Modules/AdminImportExport.pm
 msgid "Template List"
-msgstr ""
+msgstr "Lista de modelos"
 
 #. Perl Module: Kernel/Modules/AdminImportExport.pm
 msgid "number"
-msgstr ""
+msgstr "número"
 
 #. Perl Module: Kernel/Modules/AdminImportExport.pm
 msgid "number bigger than zero"
-msgstr ""
+msgstr "número maior que zero"
 
 #. Perl Module: Kernel/Modules/AdminImportExport.pm
 msgid "integer"
-msgstr ""
+msgstr "inteiro"
 
 #. Perl Module: Kernel/Modules/AdminImportExport.pm
 msgid "integer bigger than zero"
-msgstr ""
+msgstr "inteiro maior que zero"
 
 #. Perl Module: Kernel/Modules/AdminImportExport.pm
 msgid "Element required, please insert data"
-msgstr ""
+msgstr "Elemento necessário, por favor inserir dados"
 
 #. Perl Module: Kernel/Modules/AdminImportExport.pm
 msgid "Invalid data, please insert a valid %s"
-msgstr ""
+msgstr "Dados inválidos, insira um dado válido %s"
 
 #. Perl Module: Kernel/Modules/AdminImportExport.pm
 msgid "Format not found!"
-msgstr ""
+msgstr "Formato não encontrado!"
 
 #. Perl Module: Kernel/System/ImportExport/FormatBackend/CSV.pm
 msgid "Column Separator"
@@ -206,7 +210,7 @@ msgstr "Ponto (.)"
 
 #. Perl Module: Kernel/System/ImportExport/FormatBackend/CSV.pm
 msgid "Comma (,)"
-msgstr ""
+msgstr "Virgula (,)"
 
 #. Perl Module: Kernel/System/ImportExport/FormatBackend/CSV.pm
 msgid "Charset"
@@ -222,15 +226,17 @@ msgstr "Coluna"
 
 #. JS File: var/httpd/htdocs/js/ITSM.Admin.ImportExport.js
 msgid "Deleting template..."
-msgstr ""
+msgstr "Eliminando modelo..."
 
 #. JS File: var/httpd/htdocs/js/ITSM.Admin.ImportExport.js
 msgid "There was an error deleting the template. Please check the logs for more information."
 msgstr ""
+"Ocorreu um erro ao eliminar o modelo. Por favor, consulte os registos para "
+"mais informações."
 
 #. JS File: var/httpd/htdocs/js/ITSM.Admin.ImportExport.js
 msgid "Template was deleted successfully."
-msgstr ""
+msgstr "Modelo eliminado com sucesso."
 
 #. SysConfig
 msgid "Format backend module registration for the import/export module."
@@ -243,4 +249,3 @@ msgstr "Importar e exportar informações de objeto."
 #. SysConfig
 msgid "Import/Export"
 msgstr "Importar/Exportar"
-
