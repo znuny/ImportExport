@@ -3,7 +3,6 @@
     <Name>ImportExport</Name>
     <Version>6.5.2</Version>
     <Framework>6.5.x</Framework>
-    <PackageRequired Version="6.5.2">ITSMConfigurationManagement</PackageRequired>
     <Vendor>Znuny</Vendor>
     <URL>https://www.znuny.org/</URL>
     <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>

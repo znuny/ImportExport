@@ -3,3 +3,6 @@ image: registry.znuny.com/znuny/internal/docker-znuny-ci:6.5
 include:
   - project: $INCLUDE_PROJECT
     file: $INCLUDE_FILE
+
+variables:
+  PREINST_URLS: "https://download.znuny.org/releases/itsm/packages6x/:GeneralCatalog https://download.znuny.org/releases/itsm/packages6x/:ITSMCore https://download.znuny.org/releases/itsm/packages6x/:ITSMConfigurationManagement"
