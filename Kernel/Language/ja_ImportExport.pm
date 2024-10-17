@@ -87,7 +87,7 @@ sub Data {
     $Self->{Translation}->{'Import/Export'} = 'インポート/エクスポート';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'Cancel',
     'Confirm',
     'Delete this template',
