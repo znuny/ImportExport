@@ -165,14 +165,6 @@ $Selenium->RunTest(
             $Element->is_displayed();
         }
 
-        for my $StepFourClass (
-            qw(ArrowUp ArrowDown DeleteColumn)
-            )
-        {
-            my $Element = $Selenium->find_element( ".$StepFourClass", 'css' );
-            $Element->is_enabled();
-            $Element->is_displayed();
-        }
         $Selenium->find_element( "table",             'css' );
         $Selenium->find_element( "table thead tr th", 'css' );
         $Selenium->find_element( "table tbody tr td", 'css' );
@@ -191,6 +183,16 @@ $Selenium->RunTest(
         # Add and select 'Incident State' mapping element.
         $Selenium->find_element( "#MappingAddButton", 'css' )->VerifiedClick();
         $Selenium->find_element(".//*[\@id='Object::3::Key']/option[5]")->click();
+
+        for my $StepFourClass (
+            qw(ArrowUp ArrowDown DeleteColumn)
+            )
+        {
+            my $Element = $Selenium->find_element( ".$StepFourClass", 'css' );
+            $Element->is_enabled();
+            $Element->is_displayed();
+        }
+
         $Selenium->find_element( "#SubmitNextButton", 'css' )->VerifiedClick();
 
         # Check step 5 of 5 screen.

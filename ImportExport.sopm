@@ -123,10 +123,6 @@
         <File Permission="660" Location="var/packagesetup/ImportExport.pm"/>
         <File Permission="660" Location="var/httpd/htdocs/js/ITSM.Admin.ImportExport.js"/>
         <File Permission="660" Location="var/httpd/htdocs/skins/Agent/default/css/ITSM.ImportExport.css"/>
-        <File Permission="660" Location="var/httpd/htdocs/skins/Agent/default/img/icons/importexport_arrow_up.png"/>
-        <File Permission="660" Location="var/httpd/htdocs/skins/Agent/default/img/icons/importexport_arrow_up_disabled.png"/>
-        <File Permission="660" Location="var/httpd/htdocs/skins/Agent/default/img/icons/importexport_arrow_down.png"/>
-        <File Permission="660" Location="var/httpd/htdocs/skins/Agent/default/img/icons/importexport_arrow_down_disabled.png"/>
     </Filelist>
     <DatabaseInstall Type="post">
         <TableCreate Name="imexport_template">

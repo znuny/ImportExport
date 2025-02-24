@@ -154,7 +154,7 @@
                     <input type="hidden" name="TemplateID" value="[% Data.TemplateID %]" />
                     <input type="hidden" name="SubmitNext" value="1" />
 
-                    <fieldset class="TableLike no-padding">
+                    <fieldset class="TableLike">
 
                         <div class="field-wrapper">
                             <label class="Mandatory" for="Name" ><span class="Marker">*</span> [% Translate("Name") | html %]:</label>
@@ -235,7 +235,7 @@
                         </div>
 
                         <div class="field-wrapper form-button-actions">
-                            <div class="Field SpacingTop buttons-field">
+                            <div class="Field SpacingTop SpacingBottom buttons-field">
                                 <button class="Primary CallForAction btn-primary btn-main btn-width-md" type="submit"><span>[% Translate("Next") | html %]</span></button>
                                 [% Translate("or") | html %]
                                 <a class="btn-main btn-cancel-ghost btn-width-md" href="[% Env("Baselink") %]Action=[% Env("Action") %];Subaction='Overview'">[% Translate("Cancel") | html %] </a>
@@ -254,7 +254,7 @@
                     <input type="hidden" name="TemplateID" value="[% Data.TemplateID | html %]" />
                     <input type="hidden" name="SubmitNext" value="1" />
 
-                    <fieldset class="TableLike no-padding">
+                    <fieldset class="TableLike">
 
                         <div class="field-wrapper">
                             <label>[% Translate("Name") | html %]:</label>
@@ -286,7 +286,7 @@
                         </div>
 [% RenderBlockEnd("TemplateEdit2Element") %]
                         <div class="field-wrapper form-button-actions">
-                            <div class="Field SpacingTop buttons-field">
+                            <div class="Field SpacingTop SpacingBottom buttons-field">
                                 <button class="Back CallForAction btn-main btn-primary-ghost btn-width-md" type="button" name="Back" ><span>[% Translate("Back") | html %]</span></button>
                                 <button class="Primary CallForAction btn-primary btn-main btn-width-md" type="submit"><span>[% Translate("Next") | html %]</span></button>
                             </div>
@@ -304,7 +304,7 @@
                     <input type="hidden" name="TemplateID" value="[% Data.TemplateID | html %]" />
                     <input type="hidden" name="SubmitNext" value="1" />
 
-                    <fieldset class="TableLike no-padding">
+                    <fieldset class="TableLike">
 
                         <div class="field-wrapper">
                             <label>[% Translate("Name") | html %]:</label>
@@ -337,7 +337,7 @@
                         </div>
 [% RenderBlockEnd("TemplateEdit3Element") %]
                         <div class="field-wrapper form-button-actions">
-                            <div class="Field SpacingTop buttons-field">
+                            <div class="Field SpacingTop SpacingBottom buttons-field">
                                 <button class="Back CallForAction btn-primary-ghost btn-main btn-width-md" type="button" name="Back" ><span>[% Translate("Back") | html %]</span></button>
                                 <button class="Primary CallForAction btn-primary btn-main btn-width-md" type="submit"><span>[% Translate("Next") | html %]</span></button>
                             </div>
@@ -414,19 +414,13 @@
 [% RenderBlockEnd("TemplateEdit4MapNumberColumn") %]
                                 <td class="Center">
 [% RenderBlockStart("TemplateEdit4UpButton") %]
-                                    <button class="ArrowUp" type="submit" name="MappingUp::[% Data.MappingID | html %]" value="[% Translate("Up") | html %]"> [% Translate("Up") | html %] </button>
+                                    <button type="submit" name="MappingUp::[% Data.MappingID | html %]" class="ArrowUp table-icon-hover-md"  value="[% Translate('Up') | html %]"><i class="fa fa-arrow-up"></i></button>
 [% RenderBlockEnd("TemplateEdit4UpButton") %]
-[% RenderBlockStart("TemplateEdit4NoUpButton") %]
-                                    <button class="ArrowUp" type="submit" disabled="disabled"> [% Translate("Up") | html %]</button>
-[% RenderBlockEnd("TemplateEdit4NoUpButton") %]
                                 </td>
                                 <td class="Center">
 [% RenderBlockStart("TemplateEdit4DownButton") %]
-                                    <button class="ArrowDown" type="submit" name="MappingDown::[% Data.MappingID | html %]" value="[% Translate("Down") | html %]"> [% Translate("Down") | html %]</button>
+                                    <button type="submit" name="MappingDown::[% Data.MappingID | html %]" class="ArrowDown table-icon-hover-md" value="[% Translate('Down') | html %]"><i class="fa fa-arrow-down"></i></button>
 [% RenderBlockEnd("TemplateEdit4DownButton") %]
-[% RenderBlockStart("TemplateEdit4NoDownButton") %]
-                                    <button class="ArrowDown" type="submit" disabled="disabled"> [% Translate("Down") | html %]</button>
-[% RenderBlockEnd("TemplateEdit4NoDownButton") %]
                                 </td>
 
                                 <td class="Center">
@@ -447,7 +441,7 @@
                     </div>
 
                     <div class="field-wrapper form-button-actions">
-                        <div class="SpacingTop buttons-field">
+                        <div class="SpacingTop SpacingBottom buttons-field">
                             <button class="Back CallForAction btn-primary-ghost btn-main btn-width-md" type="submit" name="SubmitBack" value="SubmitBack"><span>[% Translate("Back") | html %]</span></button>
                             <button class="Primary CallForAction btn-primary btn-main btn-width-md" type="submit" name="SubmitNextButton" id="SubmitNextButton" value="1"><span>[% Translate("Next") | html %]</span></button>
                         </div>
@@ -464,7 +458,7 @@
                     <input type="hidden" name="Subaction" value="TemplateSave5" />
                     <input type="hidden" name="TemplateID" value="[% Data.TemplateID | html %]" />
                     <input type="hidden" name="SubmitNext" value="1" />
-                    <fieldset class="TableLike no-padding">
+                    <fieldset class="TableLike">
                         <div class="field-wrapper">
                             <label>[% Translate("Template Name") | html %]:</label>
                             <div class="Field">
@@ -489,7 +483,7 @@
 [% RenderBlockEnd("TemplateEdit5Element") %]
 
                         <div class="field-wrapper form-button-actions">
-                            <div class="SpacingTop buttons-field">
+                            <div class="SpacingTop SpacingBottom buttons-field">
                                 <button class="Back CallForAction btn-primary-ghost btn-main btn-width-md" type="submit" name="SubmitBack" value="SubmitBack"><span>[% Translate("Back") | html %]</span></button>
                                 <button class="Primary CallForAction btn-primary btn-main btn-width-md" type="submit"><span>[% Translate("Finish") | html %]</span></button>
                             </div>
@@ -509,7 +503,7 @@
                     <input type="hidden" name="Subaction" value="Import" />
                     <input type="hidden" name="TemplateID" value="[% Data.TemplateID | html %]" />
 
-                    <fieldset class="TableLike no-padding">
+                    <fieldset class="TableLike">
 
                         <div class="Clear">
                             <label for="SourceFile">[% Translate("Name") | html %]:</label>
@@ -526,7 +520,7 @@
                         </div>
 
                         <div class="field-wrapper form-button-actions">
-                            <div class="SpacingTop buttons-field">
+                            <div class="SpacingTop SpacingBottom buttons-field">
                                 <button class="Primary CallForAction btn-primary btn-main btn-width-md" type="submit" value="[% Translate("Start Import") | html %]"><span>[% Translate("Start Import") | html %]</span></button>
                             </div>
                         </div>
@@ -543,7 +537,7 @@
                     <input type="hidden" name="Action" value="[% Env("Action") %]"/>
                     <input type="hidden" name="Subaction" value="Overview"/>
 
-                    <fieldset class="TableLike no-padding">
+                    <fieldset class="TableLike">
                         <div class="Clear">
                             <label>[% Translate("Records") | html %]:</label>
                             <div class="Value">[% Data.Counter | html %]</div>
@@ -578,7 +572,7 @@
                         </div>
 [% RenderBlockEnd("ImportResultLastLineNumber") %]
                         <div class="field-wrapper form-button-actions">
-                            <div class="SpacingTop buttons-field">
+                            <div class="SpacingTop SpacingBottom buttons-field">
                                 <button class="Primary CallForAction btn-primary btn-main btn-width-md" type="submit" name="Ok" value="[% Translate("Ok") | html %]"><span>[% Translate("Ok") | html %]</span></button>
                             </div>
                         </div>
@@ -597,6 +591,6 @@
 <div class="Hidden" id="DeleteImportExportDialogContainer">
     <div id ="DeleteImportExportDialog" class="InnerContent">
         <p class="Center Spacing">[% Translate("Do you really want to delete this template item?") | html %]</p>
-        <div class="SpacingTop"></div>
+        <div class="SpacingTop SpacingBottom"></div>
     </div>
 </div>
