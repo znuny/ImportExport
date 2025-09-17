@@ -2,7 +2,8 @@
 <otrs_package version="1.0">
     <Name>ImportExport</Name>
 <!-- nofilter(TidyAll::Plugin::OTRS::SOPM::DocumentationPresent) -->
-    <Version>6.0.31</Version>
+    <Version>6.0.32</Version>
+    <ChangeLog Version="6.0.32" Date="2025-09-17 11:15:06 +0200">Added breadcrumb navigation to AdminImportExport dialog.</ChangeLog>
     <ChangeLog Version="6.0.31" Date="2021-09-29 15:39:27 +0200">Znuny LTS.</ChangeLog>
     <Framework Minimum="6.0.30">6.0.x</Framework>
     <Vendor>OTRS AG</Vendor>
