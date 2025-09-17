@@ -16,16 +16,16 @@ sub Data {
     my $Self = shift;
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
-    $Self->{Translation}->{'Import/Export Management'} = '';
+    $Self->{Translation}->{'Import/Export Management'} = 'Διαχείριση Εισαγωγών/Εξαγωγών';
     $Self->{Translation}->{'Step 1 of 5 - Edit common information'} = '';
     $Self->{Translation}->{'Step 2 of 5 - Edit object information'} = '';
     $Self->{Translation}->{'Step 3 of 5 - Edit format information'} = '';
     $Self->{Translation}->{'Step 4 of 5 - Edit mapping information'} = '';
     $Self->{Translation}->{'Step 5 of 5 - Edit search information'} = '';
-    $Self->{Translation}->{'Add template'} = '';
-    $Self->{Translation}->{'Create a template to import and export object information.'} = '';
+    $Self->{Translation}->{'Add template'} = 'Προσθήκη Προτύπου';
+    $Self->{Translation}->{'Create a template to import and export object information.'} = 'Δημιουργία Προτύπου για την εισαγωγή και εξαγωγή πληροφοριών αντικειμένου.';
     $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
-        '';
+        'Για τη χρήση αυτού module, χρειάζεται να εγκαταστήσετε το ITSMConfigurationManagement ή οποιοδήποτε άλλο πακέτο που παρέχει υποστήριξη για αντικείμενα που πρόκειται να εισαχθούν/εξαχθούν.';
     $Self->{Translation}->{'Start Import'} = '';
     $Self->{Translation}->{'Start Export'} = '';
     $Self->{Translation}->{'Delete this template'} = '';
