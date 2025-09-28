@@ -310,7 +310,7 @@ $Selenium->RunTest(
         $Selenium->PageContains(
             String  => '(Created: 1)',
             Message => "Import test ConfigItem - success",
-            ,
+
         );
 
         # Navigate to imported test created ConfigItem and verify it.
