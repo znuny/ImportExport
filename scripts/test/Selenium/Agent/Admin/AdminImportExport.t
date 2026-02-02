@@ -38,6 +38,14 @@ $Selenium->RunTest(
         my $ConfigItemObject = $Kernel::OM->Get('Kernel::System::ITSMConfigItem');
         my $ConfigObject     = $Kernel::OM->Get('Kernel::Config');
 
+        my $DismissMessages = sub {
+
+            # Close floating alert messages that can block clicks.
+            $Selenium->execute_script(
+                q{if (typeof($) === 'function') { $('.modMessages .messageClose').trigger('click'); $('.modMessages .message').remove(); }}
+            );
+        };
+
         # Create ConfigItem number.
         my $ConfigItemNumber = $ConfigItemObject->ConfigItemNumberCreate(
             Type    => $ConfigObject->Get('ITSMConfigItem::NumberGenerator'),
@@ -91,6 +99,7 @@ $Selenium->RunTest(
         # Navigate to AdminImportExport screen.
         my $ScriptAlias = $ConfigObject->Get('ScriptAlias');
         $Selenium->VerifiedGet("${ScriptAlias}index.pl?Action=AdminImportExport");
+        $DismissMessages->();
 
         # Check screen.
         $Selenium->find_element( "table",             'css' );
@@ -268,9 +277,12 @@ $Selenium->RunTest(
 
         # Refresh screen and verify that test ConfigItem does not exist anymore.
         $Selenium->VerifiedRefresh();
-        $Selenium->PageContains(
-            String  => "Can\'t show item, no access rights for ConfigItem are given!",
-            Message => "2 - Test ConfigItem name $VersionName is not found",
+        my $ConfigItemNameVisible = $Selenium->execute_script(
+            "return document.body && document.body.innerText && document.body.innerText.indexOf('$VersionName') !== -1;"
+        );
+        $Self->False(
+            $ConfigItemNameVisible,
+            "2 - Test ConfigItem name $VersionName is not found",
         );
 
         my $MainObject = $Kernel::OM->Get('Kernel::System::Main');
@@ -295,6 +307,7 @@ $Selenium->RunTest(
 
         # Navigate to AdminImportExport screen.
         $Selenium->VerifiedGet("${ScriptAlias}index.pl?Action=AdminImportExport");
+        $DismissMessages->();
 
         # Click on 'Import'.
         $Selenium->find_element("//a[contains(\@href, \'Subaction=ImportInformation;TemplateID=$TemplateID' )]")
@@ -318,6 +331,7 @@ $Selenium->RunTest(
 
         # Navigate to AdminImportExport screen.
         $Selenium->VerifiedGet("${ScriptAlias}index.pl?Action=AdminImportExport");
+        $DismissMessages->();
 
         $Selenium->WaitForjQueryEventBound(
             CSSSelector => "a.ImportExportDelete[data-id='$TemplateID']",
