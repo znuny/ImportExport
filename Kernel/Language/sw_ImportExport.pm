@@ -86,7 +86,7 @@ sub Data {
     $Self->{Translation}->{'Import/Export'} = 'Leta/Hamisha';
 
 
-    push @{ $Self->{JavaScriptStrings} // [] }, (
+    push @{ $Self->{JavaScriptStrings} //= [] }, (
     'Cancel',
     'Delete',
     'Delete this template',
