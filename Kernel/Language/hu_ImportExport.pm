@@ -17,11 +17,11 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
     $Self->{Translation}->{'Import/Export Management'} = 'Importálás/exportálás kezelés';
-    $Self->{Translation}->{'Step 1 of 5 - Edit common information'} = '1. lépés az 5-ből - közös információk szerkesztése';
-    $Self->{Translation}->{'Step 2 of 5 - Edit object information'} = '2. lépés az 5-ből - objektuminformációk szerkesztése';
-    $Self->{Translation}->{'Step 3 of 5 - Edit format information'} = '3. lépés az 5-ből - formátuminformációk szerkesztése';
-    $Self->{Translation}->{'Step 4 of 5 - Edit mapping information'} = '4. lépés az 5-ből - leképezési információk szerkesztése';
-    $Self->{Translation}->{'Step 5 of 5 - Edit search information'} = '5. lépés az 5-ből - keresési információk szerkesztése';
+    $Self->{Translation}->{'Step 1 of 5 - Edit common information'} = '1. lépés az 5-ből – közös információk szerkesztése';
+    $Self->{Translation}->{'Step 2 of 5 - Edit object information'} = '2. lépés az 5-ből – objektuminformációk szerkesztése';
+    $Self->{Translation}->{'Step 3 of 5 - Edit format information'} = '3. lépés az 5-ből – formátuminformációk szerkesztése';
+    $Self->{Translation}->{'Step 4 of 5 - Edit mapping information'} = '4. lépés az 5-ből – leképezési információk szerkesztése';
+    $Self->{Translation}->{'Step 5 of 5 - Edit search information'} = '5. lépés az 5-ből – keresési információk szerkesztése';
     $Self->{Translation}->{'Add template'} = 'Sablon hozzáadása';
     $Self->{Translation}->{'Create a template to import and export object information.'} = 'Sablon létrehozása objektuminformációk importálásához és exportálásához.';
     $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
@@ -38,7 +38,7 @@ sub Data {
     $Self->{Translation}->{'Restrict export per search'} = 'Exportálás korlátozása keresésenként';
     $Self->{Translation}->{'Import information'} = 'Importálási információk';
     $Self->{Translation}->{'Source File'} = 'Forrásfájl';
-    $Self->{Translation}->{'Import summary for %s'} = '%s importálási összegzése';
+    $Self->{Translation}->{'Import summary for %s'} = '%s importálási összefoglalója';
     $Self->{Translation}->{'Records'} = 'Rekordok';
     $Self->{Translation}->{'Success'} = 'Sikeres';
     $Self->{Translation}->{'Duplicate names'} = 'Nevek kettőzése';
