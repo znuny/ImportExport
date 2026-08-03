@@ -17,7 +17,7 @@ sub Data {
 
     # TT Template: Kernel/Output/HTML/Templates/Standard/AdminImportExport.tt
     $Self->{Translation}->{'Import/Export Management'} = 'Management import/export';
-    $Self->{Translation}->{'Add template'} = '';
+    $Self->{Translation}->{'Add template'} = 'Adaugă șablon';
     $Self->{Translation}->{'Create a template to import and export object information.'} = 'Crează un șablon pentru import/export informații obiecte.';
     $Self->{Translation}->{'To use this module, you need to install ITSMConfigurationManagement or any other package that provides back end for objects to be imported and exported.'} =
         '';
