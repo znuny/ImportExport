@@ -92,9 +92,9 @@ sub FormInputCreate {
     }
 
     # prepare data
-    my $ID   = ( $Param{Prefix} || '' ) . ( $Param{Item}->{Key} );
-    my $Name = ( $Param{Prefix} || '' ) . ( $Param{Name} || $ID );
-    my $Class = ( $SizeClass || '' ) . ( $Param{Class} || '' );
+    my $ID    = ( $Param{Prefix} || '' ) . ( $Param{Item}->{Key} );
+    my $Name  = ( $Param{Prefix} || '' ) . ( $Param{Name}  || $ID );
+    my $Class = ( $SizeClass     || '' ) . ( $Param{Class} || '' );
 
     my $String = "<input id=\"$ID\" type=\"text\" name=\"$Name\" class=\"$Class\" ";
 
