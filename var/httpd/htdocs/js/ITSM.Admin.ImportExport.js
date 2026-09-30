@@ -38,6 +38,15 @@ ITSM.Admin = ITSM.Admin || {};
             $NextButton = $("button.Primary[name='SubmitNextButton']").first();
             $FirstColumn = $('#Object\\:\\:0\\:\\:Key');
 
+            // Init CleanUpObjectKeyValues after load.
+            TargetNS.CleanUpObjectKeyValues();
+
+            $('.ObjectKey').each(function() {
+                $(this).bind('change', function () {
+                    TargetNS.CleanUpObjectKeyValues();
+                });
+            });
+
             // handle changes to the first column selector
             $FirstColumn.bind('change', function () {
 
@@ -106,7 +115,7 @@ ITSM.Admin = ITSM.Admin || {};
     };
 
     /**
-     * @name ImportExportDelete
+     * @name InitImportExportDelete
      * @memberof ITSM.Admin.ImportExport
      * @function
      * @description
@@ -159,6 +168,37 @@ ITSM.Admin = ITSM.Admin || {};
                 ]
             );
             return false;
+        });
+    };
+
+    /**
+     * @name CleanUpObjectKeyValues
+     * @memberof ITSM.Admin.ImportExport
+     * @function
+     * @description
+     *      This function removes all options from the other ObjectKey dropdowns.
+     */
+    TargetNS.CleanUpObjectKeyValues = function () {
+
+        // Get each value of all $('.ObjectKey')
+        var ObjectKeyValues = [];
+        $('.ObjectKey').each(function() {
+            var Value = $(this).val();
+            if (Value) {
+                ObjectKeyValues.push(Value);
+            }
+        });
+
+        // Loop through all ObjectKey dropdowns
+        $('.ObjectKey').each(function() {
+            var $ObjectKey = $(this);
+
+            // Remove selected values from the other ObjectKey dropdowns
+            $.each(ObjectKeyValues, function (Index, Value) {
+                if (Value != $ObjectKey.val()) {
+                    $ObjectKey.find('option[value="' + Value + '"]').remove();
+                }
+            });
         });
     };
 

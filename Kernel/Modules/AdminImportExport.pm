@@ -541,11 +541,17 @@ sub Run {
             for my $Item ( @{$MappingObjectAttributes} ) {
 
                 # create form input
+                # ObjectKey class only on Key dropdowns (used by CleanUpObjectKeyValues JS).
+                my $Class = '';
+                if ( $Item->{Key} eq 'Key' ) {
+                    $Class = 'ObjectKey';
+                }
                 my $InputString = $LayoutObject->ImportExportFormInputCreate(
                     Item   => $Item,
                     Prefix => 'Object::' . $AttributeRowCounter . '::',
                     Value  => $MappingObjectData->{ $Item->{Key} },
                     ID     => $Item->{Key} . $AttributeRowCounter,
+                    Class  => $Class,
                 );
 
                 # output attribute row

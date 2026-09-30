@@ -179,19 +179,19 @@ $Selenium->RunTest(
         $Selenium->find_element( "table tbody tr td", 'css' );
 
         # Select 'Number' mapping element.
-        $Selenium->find_element(".//*[\@id='Object::0::Key']/option[2]")->click();
+        $Selenium->find_element( "#Object\\:\\:0\\:\\:Key option[value='Number']", 'css' )->click();
 
         # Add and select 'Name' mapping element.
-        $Selenium->find_element( "#MappingAddButton", 'css' )->VerifiedClick();
-        $Selenium->find_element(".//*[\@id='Object::1::Key']/option[3]")->click();
+        $Selenium->find_element( "#MappingAddButton",                            'css' )->VerifiedClick();
+        $Selenium->find_element( "#Object\\:\\:1\\:\\:Key option[value='Name']", 'css' )->click();
 
         # Add and select 'Deployment State' mapping element.
-        $Selenium->find_element( "#MappingAddButton", 'css' )->VerifiedClick();
-        $Selenium->find_element(".//*[\@id='Object::2::Key']/option[4]")->click();
+        $Selenium->find_element( "#MappingAddButton",                                 'css' )->VerifiedClick();
+        $Selenium->find_element( "#Object\\:\\:2\\:\\:Key option[value='DeplState']", 'css' )->click();
 
         # Add and select 'Incident State' mapping element.
-        $Selenium->find_element( "#MappingAddButton", 'css' )->VerifiedClick();
-        $Selenium->find_element(".//*[\@id='Object::3::Key']/option[5]")->click();
+        $Selenium->find_element( "#MappingAddButton",                                 'css' )->VerifiedClick();
+        $Selenium->find_element( "#Object\\:\\:3\\:\\:Key option[value='InciState']", 'css' )->click();
 
         for my $StepFourClass (
             qw(ArrowUp ArrowDown DeleteColumn)
@@ -275,6 +275,8 @@ $Selenium->RunTest(
             "ConfigItem is deleted - ID $ConfigItemID",
         );
 
+        $Selenium->CreateScreenshot();
+
         # Refresh screen and verify that test ConfigItem does not exist anymore.
         $Selenium->VerifiedRefresh();
         my $ConfigItemNameVisible = $Selenium->execute_script(
@@ -284,6 +286,8 @@ $Selenium->RunTest(
             $ConfigItemNameVisible,
             "2 - Test ConfigItem name $VersionName is not found",
         );
+
+        $Selenium->CreateScreenshot();
 
         my $MainObject = $Kernel::OM->Get('Kernel::System::Main');
 
@@ -304,26 +308,49 @@ $Selenium->RunTest(
             $Success,
             "Export file $ExportFileName '$ExportLocation' is created",
         );
+        $Selenium->CreateScreenshot(
+            Filename => 'after_FileWrite',
+        );
 
         # Navigate to AdminImportExport screen.
         $Selenium->VerifiedGet("${ScriptAlias}index.pl?Action=AdminImportExport");
         $DismissMessages->();
 
+        $Selenium->CreateScreenshot(
+            Filename => 'before_click_import',
+        );
+
         # Click on 'Import'.
         $Selenium->find_element("//a[contains(\@href, \'Subaction=ImportInformation;TemplateID=$TemplateID' )]")
             ->VerifiedClick();
+
+        $Selenium->CreateScreenshot(
+            Filename => 'after_click_import',
+        );
 
         # Upload file first into Selenium-environment to use it for file uploads.
         my $LocalFile = $Selenium->upload_file($ExportLocation);
         $Selenium->find_element("//input[contains(\@name, \'SourceFile' )]")->send_keys($LocalFile);
 
+        $Selenium->CreateScreenshot(
+            Filename => 'after_start_Import',
+        );
+
         $Selenium->find_element("//button[\@value='Start Import'][\@type='submit']")->VerifiedClick();
+
+        $Selenium->CreateScreenshot(
+            Filename => 'before_PageContains',
+        );
 
         # Check for expected outcome.
         $Selenium->PageContains(
             String  => '(Created: 1)',
             Message => "Import test ConfigItem - success",
 
+        );
+
+        $Selenium->CreateScreenshot(
+            Filename => 'after_PageContains',
         );
 
         # Navigate to imported test created ConfigItem and verify it.
