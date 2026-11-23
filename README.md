@@ -16,7 +16,7 @@ This add-on provides an admin interface to create templates to import and export
 
 **Prerequisites**
 
-- Znuny 7.3
+- Znuny 7.5
 
 **Installation**
 
